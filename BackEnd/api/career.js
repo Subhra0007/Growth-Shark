@@ -6,27 +6,37 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // Set up multer to handle file uploads
-const storage = multer.memoryStorage(); // Store file in memory
-const upload = multer({ storage: storage }).single('resume'); // 'resume' matches the field name for the file input
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage }).single('resume');
 
-// Corrected Transporter Configuration
+// Email transporter configuration
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
   secure: true,
- auth: {
-    user: process.env.EMAIL_USER, // Your Gmail address
-    pass: process.env.EMAIL_PASS, // Your 16-character App Password
-    to: process.env.EMAIL_TO,
+  auth: {
+    user: process.env.EMAIL_USER, // Gmail address
+    pass: process.env.EMAIL_PASS, // App password
   },
 });
 
+// API route handler
 export default function handler(req, res) {
+  // ✅ CORS headers
+  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL || "https://growth-shark-9wit.vercel.app");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // ✅ Handle preflight request
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  // Use multer middleware to handle file upload
+  // ✅ Handle file upload
   upload(req, res, (err) => {
     if (err) {
       return res.status(500).json({ message: 'Error during file upload', error: err.message });
@@ -34,22 +44,21 @@ export default function handler(req, res) {
 
     const { name, email, countryCode, whatsapp } = req.body;
 
-    // Basic validation for required fields
+    // Validation
     if (!name || !email || !countryCode || !whatsapp || !req.file) {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
-    // Email validation using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ message: 'Invalid email format' });
     }
 
-    // Define the email content
+    // Email content
     const mailOptions = {
-       from: process.env.EMAIL_USER,
-       replyTo: email,
-       to: process.env.EMAIL_TO, // Send to yourself
+      from: process.env.EMAIL_USER,
+      replyTo: email,
+      to: process.env.EMAIL_TO,
       subject: `New Career Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -57,21 +66,21 @@ export default function handler(req, res) {
         Country Code: ${countryCode}
         WhatsApp: ${whatsapp}
       `,
-      attachments: req.file ? [{
-        filename: req.file.originalname,
-        content: req.file.buffer, // Attach the file buffer directly
-      }] : [],
+      attachments: req.file
+        ? [{
+            filename: req.file.originalname,
+            content: req.file.buffer,
+          }]
+        : [],
     };
 
-    // Send the email
+    // Send email
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.error(err);
         return res.status(500).json({ message: 'Error sending email', error: err.message });
       }
       console.log('Message sent: ' + info.response);
-
-      // Respond with success after sending email
       res.status(200).json({ message: 'Career form submitted and email sent successfully' });
     });
   });
