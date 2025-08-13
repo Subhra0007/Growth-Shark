@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
@@ -86,30 +86,6 @@ const AboutSection = () => {
     }
   };
 
-  //Swiper section
- const swiperRef = useRef(null);
-  const sliderSectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (swiperRef.current?.autoplay) {
-          if (entry.isIntersecting) {
-            swiperRef.current.autoplay.start();
-          } else {
-            swiperRef.current.autoplay.stop();
-          }
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sliderSectionRef.current) {
-      observer.observe(sliderSectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
     return (
         <section className="relative bg-black text-white px-6 py-6 overflow-hidden">
@@ -261,19 +237,11 @@ const AboutSection = () => {
     delay: 0,
     disableOnInteraction: false,
   }}
-  freeMode={{
-    enabled: true,
-    momentum: false, // ✅ replaces freeModeMomentum
-  }}
-  slidesPerGroup={logos.length} // ✅ Needed for loopFillGroupWithBlank
-  loopFillGroupWithBlank={true} // ✅ Safe now, works with slidesPerGroup
+  freeMode={true}
   allowTouchMove={false}
   modules={[Autoplay, FreeMode]}
 >
-  {[
-    ...logos, // Original logos
-    ...logos, // Duplicate to ensure enough slides for loop
-  ].map((logo, i) => (
+  {[...logos, ...logos, ...logos].map((logo, i) => (
     <SwiperSlide
       key={i}
       className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"

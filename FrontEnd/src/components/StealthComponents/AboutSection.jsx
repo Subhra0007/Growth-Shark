@@ -101,8 +101,6 @@ const AboutSection = () => {
     behind-the-scenes, <br /> prepping you for the perfect strike.
   </p>
 </div>
-
-
         <div className="lg:w-1/2">
           <div className="bg-[#141f3a] bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white ">
             <form className='space-y-6 '  onSubmit={handleSubmit}>
@@ -205,32 +203,32 @@ const AboutSection = () => {
                       {/* Side Blur */}
                       <div className="hidden lg:block pointer-events-none absolute top-0 left-0 h-full w-34  bg-gradient-to-r from-[#0b223f] to-transparent z-20 "></div>
                       <div className="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-34 bg-gradient-to-l from-[#0b223f] to-transparent z-20 "></div>
- <Swiper
-        slidesPerView="auto"
-        spaceBetween={50}
-        loop={true}
-        speed={4000}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        freeMode={true}
-        allowTouchMove={false}
-        modules={[Autoplay, FreeMode]}
-      >
-        {logos.map((logo, i) => (
-          <SwiperSlide
-            key={i}
-            className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"
-          >
-            <img
-              src={logo}
-              alt={`Logo ${i + 1}`}
-              className="h-14 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+<Swiper
+  slidesPerView="auto"
+  spaceBetween={50}
+  loop={true}
+  speed={4000}
+  autoplay={{
+    delay: 0,
+    disableOnInteraction: false,
+  }}
+  freeMode={true}
+  allowTouchMove={false}
+  modules={[Autoplay, FreeMode]}
+>
+  {[...logos, ...logos, ...logos].map((logo, i) => (
+    <SwiperSlide
+      key={i}
+      className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"
+    >
+      <img
+        src={logo}
+        alt={`Logo ${i + 1}`}
+        className="h-14 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
 </div>
 
       {/* Cards Section */}
