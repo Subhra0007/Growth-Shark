@@ -153,7 +153,7 @@ const FacebookMarketing2025 = () => {
 </div>
 
         {/* Why Instagram */}
-        <h2 className="text-3xl font-bold mb-6">Why Choose Pro-Riterz for Instagram Marketing?</h2>
+        <h2 className="text-3xl font-bold mb-6">Why Choose GrowthShark for Instagram Marketing?</h2>
         <ul className="space-y-4 text-gray-300 mb-12">
           <li className="flex gap-3">
             <FaCheckCircle className="text-[#1877f2] mt-1" />

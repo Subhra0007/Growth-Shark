@@ -38,7 +38,7 @@ const EcommerceSEO = () => {
         </div>
 
         {/* Section Title */}
-        <h2 className="text-3xl font-bold mb-10 text-center ">How Pro-Riterz Optimizes Your Online Store</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center ">How GrowthShark Optimizes Your Online Store</h2>
 
         {/* Individual Cards - NO MAP FUNCTION */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
@@ -100,7 +100,7 @@ const EcommerceSEO = () => {
 
         {/* Title */}
         <h2 className="text-4xl font-extrabold mb-8 text-center py-5">
-          Why Choose <span className="text-[#2ea9ff]">Pro-Riterz</span> for E-Commerce SEO?
+          Why Choose <span className="text-[#2ea9ff]">GrowthShark</span> for E-Commerce SEO?
         </h2>
 
         {/* Bullet Points */}

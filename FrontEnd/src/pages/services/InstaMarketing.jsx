@@ -17,7 +17,7 @@ function InstagramMarketingSection() {
         <div className="space-y-6 max-w-6xl mx-auto text-center bg-sky-400 rounded-2xl shadow-2xl p-6">
           <h2 className="text-2xl font-bold text-black">Instagram has become the go-to space for connecting with audiences.</h2>
           <p className="text-gray-800">
-            It’s where your customers are scrolling, shopping, and sharing. But standing out in a sea of content takes more than just pretty pictures. At Pro-Riterz, we deliver measurable results.
+            It’s where your customers are scrolling, shopping, and sharing. But standing out in a sea of content takes more than just pretty pictures. At GrowthShark, we deliver measurable results.
           </p>
         </div>
 

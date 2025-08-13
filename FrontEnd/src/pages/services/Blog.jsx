@@ -86,7 +86,7 @@ export default function BlogWritingSection() {
       <div className="max-w-6xl mx-auto mt-20">
           <div className="bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 p-6 shadow-lg backdrop-blur mb-12 rounded">
     <h2 className="text-3xl font-bold text-white mb-6">
-      How Pro-Riterz Creates Blogs That Deliver Results:
+      How GrowthShark Creates Blogs That Deliver Results:
     </h2>
     <ul className="space-y-6 text-base text-gray-300">
       <li className="flex items-start gap-4">
@@ -151,7 +151,7 @@ export default function BlogWritingSection() {
         {/* Why Choose Us */}
 <div className="space-y-12">
   <h3 className="text-2xl font-semibold text-sky-300 text-center">
-    Why Choose Pro-Riterz for Blog Writing?
+    Why Choose GrowthShark for Blog Writing?
   </h3>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -211,7 +211,7 @@ export default function BlogWritingSection() {
             ["", "The Ultimate Guide to Improving Customer Retention"]
           ]],
           ["Let’s Get Started", [
-            ["", "Your audience is searching for answers right now. Let Pro-Riterz help you provide them with blogs that engage, educate, and convert."],
+            ["", "Your audience is searching for answers right now. Let GrowthShark help you provide them with blogs that engage, educate, and convert."],
             ["", "Contact us today for a free consultation and take the first step toward growing your business with high-quality blog content."]
           ]]
         ].map(([title, items], idx) => (

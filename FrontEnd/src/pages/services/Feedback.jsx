@@ -11,7 +11,7 @@ const FeedbackManagement = () => {
         </h2>
 
         <p className="text-center text-lg max-w-3xl mx-auto mb-12 text-gray-300">
-          90% of consumers read reviews before purchasing, and positive reviews drive 31% higher revenue. At ProRiterz, we help you monitor, analyze, and respond to customer feedback that grows trust and improves business performance.
+          90% of consumers read reviews before purchasing, and positive reviews drive 31% higher revenue. At GrowthShark, we help you monitor, analyze, and respond to customer feedback that grows trust and improves business performance.
         </p>
 
         {/* Description Section */}
