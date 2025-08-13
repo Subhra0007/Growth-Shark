@@ -1,6 +1,7 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode } from 'swiper/modules'; 
-import 'swiper/css';
+import { useState, useRef, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode } from "swiper/modules";
+import "swiper/css";
 
 import img1 from '..//../assets/1.png';
 import img2 from '..//../assets/2.png';
@@ -31,6 +32,85 @@ const logos = [
 ];
 
 const AboutSection = () => {
+
+//Aboutform connect to backend
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    website: "",
+    service: "Social Media Marketing",
+    requirement: "",
+    revenue: "Less than $5,000",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/aboutus`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setMessage("Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          contact: "",
+          website: "",
+          service: "Social Media Marketing",
+          requirement: "",
+          revenue: "Less than $5,000",
+        });
+      } else {
+        setMessage(`${data.message}`);
+      }
+    } catch (error) {
+      setMessage("Failed to submit. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  //Swiper section
+ const swiperRef = useRef(null);
+  const sliderSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (swiperRef.current?.autoplay) {
+          if (entry.isIntersecting) {
+            swiperRef.current.autoplay.start();
+          } else {
+            swiperRef.current.autoplay.stop();
+          }
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sliderSectionRef.current) {
+      observer.observe(sliderSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
     return (
         <section className="relative bg-black text-white px-6 py-6 overflow-hidden">
             {/* Glow Background */}
@@ -45,71 +125,125 @@ const AboutSection = () => {
             </div>
 
             {/* Header + Form */}
-            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-8 relative z-10">
-                <div className="lg:w-1/2 space-y-4 text-center lg:text-left">
-                    <h1 className="text-4xl font-bold mb-4">Know Your Territory <br /> Before The Hunt</h1>
-                    <p className="text-gray-300">
-                        Be aware of other 'predators' & your strategy for a strike. <br /> Organize, strategize, and delegate with precision.
-                    </p>
-                    <p className="text-gray-300">
-                        Fill the form below and let our Marketing team identify <br /> your blue ocean strategy for a perfect take down.
-                    </p>
-                </div>
+           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 relative z-10">
+      <div className="lg:w-1/2 space-y-4 text-center lg:text-left">
+        <h1 className="text-4xl font-bold mb-4">
+          Know Your Territory <br /> Before The Hunt
+        </h1>
+        <p className="text-gray-300">
+          Be aware of other 'predators' & your strategy for a strike. <br /> Organize, strategize, and delegate with precision.
+        </p>
+        <p className="text-gray-300">
+          Fill the form below and let our Marketing team identify <br /> your blue ocean strategy for a perfect take down.
+        </p>
+      </div>
 
-                <div className="lg:w-1/2">
-                    <div className="bg-gray-900 bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white ">
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" placeholder="Full Name" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-                                <input type="email" placeholder="Work Email" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-                                <input type="email" placeholder="Contact No" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-                                <input type="url" placeholder="Website URL" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-                            </div>
-
-                            <div>
-                                <label className="block mb-1 text-sm text-gray-400">Service you're interested in</label>
-                                <select className="w-full p-3 rounded bg-gray-800 text-white">
-                                    <option>Social Media Marketing</option>
-                                    <option>SEO</option>
-                                    <option>Forum Marketing</option>
-                                    <option>Linkedin Personal Branding</option>
-                                    <option>Community Marketing</option>
-                                    <option>Content Marketing Strategy</option>
-                                    <option>Video Editing & Graphics Designing</option>
-                                    <option>YouTube SEO</option>
-                                    <option>Voice-over and Scripting</option>
-                                    <option>Photo and Videography</option>
-                                    <option>Translation & Transcription</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                
-                                <textarea rows="4"
-                                 className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
-                                  placeholder="Briefly discuss your requirement">
-                                  </textarea>
-                            </div>
-
-                            <div>
-                                <label className="block mb-1 text-sm text-gray-400">What's your monthly recurring revenue?</label>
-                                <select className="w-full p-3 rounded bg-gray-800 text-white">
-                                    <option>Less than $5,000</option>
-                                    <option>$5,000 - $10,000</option>
-                                    <option>More than $10,000</option>
-                                </select>
-                            </div>
-
-                           <div className="flex items-center justify-center">
-                           <button className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300">
-                          Submit
-                         </button>
-                         </div>
-                        </form>
-                    </div>
-                </div>
+      <div className="lg:w-1/2">
+        <div className="bg-gray-900 bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Work Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+              />
+              <input
+                type="text"
+                name="contact"
+                placeholder="Contact No"
+                value={formData.contact}
+                onChange={handleChange}
+                className="p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+              />
+              <input
+                type="url"
+                name="website"
+                placeholder="Website URL"
+                value={formData.website}
+                onChange={handleChange}
+                className="p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+              />
             </div>
 
+            <div>
+              <label className="block mb-1 text-sm text-gray-400">
+                Service you're interested in
+              </label>
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full p-3 rounded bg-gray-800 text-white"
+              >
+                <option>Social Media Marketing</option>
+                <option>SEO</option>
+                <option>Forum Marketing</option>
+                <option>Linkedin Personal Branding</option>
+                <option>Community Marketing</option>
+                <option>Content Marketing Strategy</option>
+                <option>Video Editing & Graphics Designing</option>
+                <option>YouTube SEO</option>
+                <option>Voice-over and Scripting</option>
+                <option>Photo and Videography</option>
+                <option>Translation & Transcription</option>
+              </select>
+            </div>
+
+            <div>
+              <textarea
+                name="requirement"
+                rows="4"
+                value={formData.requirement}
+                onChange={handleChange}
+                className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+                placeholder="Briefly discuss your requirement"
+              ></textarea>
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm text-gray-400">
+                What's your monthly recurring revenue?
+              </label>
+              <select
+                name="revenue"
+                value={formData.revenue}
+                onChange={handleChange}
+                className="w-full p-3 rounded bg-gray-800 text-white"
+              >
+                <option>Less than $5,000</option>
+                <option>$5,000 - $10,000</option>
+                <option>More than $10,000</option>
+              </select>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button
+                type="submit"
+                disabled={loading}
+                className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
+              >
+                {loading ? "Submitting..." : "Submit"}
+              </button>
+            </div>
+
+            {message && (
+              <p className="text-center text-sm mt-4">{message}</p>
+            )}
+          </form>
+        </div>
+      </div>
+    </div>
             {/* Logos Slider */}
             <div className="mt-20 relative z-10">
                 <h2 className="text-4xl font-bold mb-6 text-center text-[#2ea9ff]">Those Who Hunted With Us</h2>
@@ -118,33 +252,41 @@ const AboutSection = () => {
 
              {/* Right fade */}
              <div className="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-34 bg-gradient-to-l from-black to-transparent z-10"></div>
+<Swiper
+  slidesPerView="auto"
+  spaceBetween={50}
+  loop={true}
+  speed={4000}
+  autoplay={{
+    delay: 0,
+    disableOnInteraction: false,
+  }}
+  freeMode={{
+    enabled: true,
+    momentum: false, // ✅ replaces freeModeMomentum
+  }}
+  slidesPerGroup={logos.length} // ✅ Needed for loopFillGroupWithBlank
+  loopFillGroupWithBlank={true} // ✅ Safe now, works with slidesPerGroup
+  allowTouchMove={false}
+  modules={[Autoplay, FreeMode]}
+>
+  {[
+    ...logos, // Original logos
+    ...logos, // Duplicate to ensure enough slides for loop
+  ].map((logo, i) => (
+    <SwiperSlide
+      key={i}
+      className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"
+    >
+      <img
+        src={logo}
+        alt={`Logo ${i + 1}`}
+        className="h-14 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
 
- <Swiper
-        slidesPerView="auto"
-        spaceBetween={50}
-        loop={true}
-        speed={4000}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        freeMode={true}
-        allowTouchMove={false}
-        modules={[Autoplay, FreeMode]}
-      >
-        {logos.map((logo, i) => (
-          <SwiperSlide
-            key={i}
-            className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"
-          >
-            <img
-              src={logo}
-              alt={`Logo ${i + 1}`}
-              className="h-14 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
             </div>
 
             {/* Cards Section */}

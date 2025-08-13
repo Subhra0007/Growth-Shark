@@ -18,10 +18,15 @@ export default function Hero() {
           <p className="text-lg sm:text-xl text-gray-300 mt-4">
             Pull yourself together before the hunt!
           </p>
-
-          <button className="mt-4 sm:mt-6 px-6 py-3 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-lg transition text-sm sm:text-base lg:text-lg cursor-pointer">
-            CHECK YOUR ELIGIBILITY
-          </button>
+          <a
+              href="https://calendly.com/proriterz101/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 sm:mt-6 px-6 py-3 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-lg transition text-sm sm:text-base lg:text-lg cursor-pointer"
+              >
+                CHECK YOUR ELIGIBILITY
+             </a>
+          
         </div>
       </div>
     </section>

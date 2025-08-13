@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules'; 
 import 'swiper/css';
@@ -31,6 +32,61 @@ const logos = [
 ];
 
 const AboutSection = () => {
+
+  //Aboutform connect to backend
+  
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      contact: "",
+      website: "",
+      service: "Email Gatekeeping",
+      requirement: "",
+      revenue: "Less than $5,000",
+    });
+  
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
+      setMessage("");
+  
+      try {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/aboutus`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+  
+        const data = await res.json();
+        if (res.ok) {
+          setMessage("Form submitted successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            contact: "",
+            website: "",
+            service: "Email Gatekeeping",
+            requirement: "",
+            revenue: "Less than $5,000",
+          });
+        } else {
+          setMessage(`${data.message}`);
+        }
+      } catch (error) {
+        setMessage("Failed to submit. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+
   return (
     <section className="text-white px-6 py-6 overflow-hidden">
       {/* Header + Form */}
@@ -49,17 +105,45 @@ const AboutSection = () => {
 
         <div className="lg:w-1/2">
           <div className="bg-[#141f3a] bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white ">
-            <form className='space-y-6'>
+            <form className='space-y-6 '  onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input type="text" placeholder="Full Name" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-              <input type="text" placeholder="Work Email" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-              <input type="text" placeholder="Contact No" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
-              <input type="text" placeholder="Website URL" className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+              <input 
+              type="text"
+              name="name"  
+              placeholder="Full Name" 
+              value={formData.name}
+              onChange={handleChange}
+              className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+              <input 
+              type="email"
+              name="email"
+              placeholder="Work Email" 
+              value={formData.email}
+              onChange={handleChange}
+              className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+              <input 
+              type="text" 
+              name="contact"
+              placeholder="Contact No"
+              value={formData.contact}
+              onChange={handleChange} 
+              className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+              <input 
+              type="url" 
+              name="website"
+              placeholder="Website URL"
+              value={formData.website}
+              onChange={handleChange} 
+              className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
             </div>
 
             <div>
               <label className="block mb-1 text-sm text-gray-400">Service you're interested in:</label>
-              <select className="w-full p-3 rounded bg-gray-800 text-white">
+              <select 
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full p-3 rounded bg-gray-800 text-white">
                 <option>Email Gatekeeping</option>
                 <option>Calendar Coordination</option>
                 <option>Call Gatekeeping</option>
@@ -73,7 +157,11 @@ const AboutSection = () => {
             </div>
 
 
-            <textarea rows="4"
+            <textarea
+             name="requirement"
+             rows="4"
+             value={formData.requirement}
+             onChange={handleChange}
               className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
               placeholder="Briefly discuss your requirement">
             </textarea>
@@ -82,7 +170,11 @@ const AboutSection = () => {
               <label className="block mb-1 text-sm text-gray-400">
                 What's your monthly recurring revenue?
               </label>
-              <select className="w-full p-3 rounded bg-gray-800 text-white">
+              <select 
+              name="revenue"
+              value={formData.revenue}
+              onChange={handleChange}
+              className="w-full p-3 rounded bg-gray-800 text-white">
                 <option>Less than $5,000</option>
                 <option>$5,000-$10,000</option>
                 <option>More than $10,000</option>
@@ -90,10 +182,17 @@ const AboutSection = () => {
             </div>
 
             <div className="flex items-center justify-center">
-              <button className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300">
-                Submit
+              <button 
+              type="submit"
+              disabled={loading}
+              className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer">
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
+
+            {message && (
+              <p className="text-center text-sm mt-4">{message}</p>
+            )}
             </form>
           </div>
         </div>
