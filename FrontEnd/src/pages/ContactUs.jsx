@@ -127,7 +127,7 @@ async function handleSubmit(e) {
               </p>
               <button
                 type="submit"
-                className="bg-sky-400 text-black px-6 py-2 rounded shadow hover:bg-sky-500 hover:scale-105 transition"
+                className="bg-sky-400 text-black px-6 py-2 rounded shadow hover:bg-sky-500 hover:scale-105 transition cursor-pointer"
               >
                 Send Message
               </button>

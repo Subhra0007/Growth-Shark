@@ -180,7 +180,7 @@ export default function Career() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-6 w-full bg-sky-500 hover:bg-sky-400 text-black font-semibold py-3 rounded-lg transition"
+              className="mt-6 w-full bg-sky-500 hover:bg-sky-400 text-black font-semibold py-3 rounded-lg transition cursor-pointer"
             >
               {isSubmitting ? "Submitting..." : "Submit Application"}
             </button>

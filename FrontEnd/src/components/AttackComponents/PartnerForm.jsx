@@ -159,7 +159,7 @@ function PartnerForm() {
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={handleNext}
-                        className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-8 py-3 rounded-full transition text-base "
+                        className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-8 py-3 rounded-full transition text-base cursor-pointer "
                     >
                         Next
                     </button>
