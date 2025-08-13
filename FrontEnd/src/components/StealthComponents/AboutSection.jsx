@@ -242,7 +242,7 @@ const AboutSection = () => {
 
 {/* Cards Grid */}
    {/* Cards Grid */}
-<div className="relative lg:h-[600px]  flex flex-col lg:flex-row items-center justify-between gap-10 max-w-6xl mx-auto">
+<div className="relative lg:h-[450px]  flex flex-col lg:flex-row items-center justify-between gap-10 max-w-6xl mx-auto">
 
   {/* Card 1 */}
   <div
