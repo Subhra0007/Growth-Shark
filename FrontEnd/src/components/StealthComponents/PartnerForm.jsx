@@ -93,38 +93,42 @@ function PartnerForm() {
     };
     
     // Renders the input or radio button options for the current question
-    const renderQuestionContent = () => {
-        if (currentQuestion.type === 'text' || currentQuestion.type === 'email') {
-            return (
-                <input
-                    type={currentQuestion.type}
-                    name={currentQuestion.id}
-                    placeholder={`Write your ${currentQuestion.id} here...`}
-                    className="w-full px-4 sm:px-6 py-3 rounded-full bg-[#1e3a47] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#49b9ff] transition"
-                    value={answers[currentQuestion.id] || ''}
-                    onChange={handleInputChange}
-                />
-            );
-        } else {
-            return (
-                <div className="flex flex-col space-y-4">
-                    {currentQuestion.options.map((option, index) => (
-                        <label key={index} className="flex items-center space-x-3 text-sm sm:text-base cursor-pointer">
-                            <input
-                                type="radio"
-                                name={currentQuestion.id}
-                                value={option}
-                                checked={answers[currentQuestion.id] === option}
-                                onChange={handleInputChange}
-                                className="form-radio h-5 w-5 text-[#49b9ff] bg-transparent border-gray-500 checked:bg-[#49b9ff] focus:ring-[#49b9ff]"
-                            />
-                            <span className="text-white">{option}</span>
-                        </label>
-                    ))}
-                </div>
-            );
-        }
-    };
+  const renderQuestionContent = () => {
+    if (currentQuestion.type === 'text' || currentQuestion.type === 'email') {
+        return (
+            <input
+                type={currentQuestion.type}
+                name={currentQuestion.id}
+                placeholder={`Write your ${currentQuestion.id} here...`}
+                className="w-full px-6 py-4 rounded-full bg-[#1e3a47] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#49b9ff] transition  text-base mt-5"
+                value={answers[currentQuestion.id] || ''}
+                onChange={handleInputChange}
+            />
+        );
+    } else {
+        return (
+            <div className="flex flex-col space-y-4  mt-5 ">
+                {currentQuestion.options.map((option, index) => (
+                    <label
+                        key={index}
+                        className="flex items-center space-x-3 text-lg cursor-pointer"
+                    >
+                        <input
+                            type="radio"
+                            name={currentQuestion.id}
+                            value={option}
+                            checked={answers[currentQuestion.id] === option}
+                            onChange={handleInputChange}
+                            className="form-radio h-5 w-5 text-[#49b9ff] bg-transparent border-gray-500 checked:bg-[#49b9ff] focus:ring-[#49b9ff]"
+                        />
+                        <span className="text-white">{option}</span>
+                    </label>
+                ))}
+            </div>
+        );
+    }
+};
+
 
     // Renders the appropriate content based on the quiz state (loading, result, or questions)
     const renderQuizContent = () => {
@@ -162,13 +166,13 @@ function PartnerForm() {
         return (
             <>
                 <h2 className="text-base sm:text-lg md:text-xl font-semibold">{currentQuestion.q}</h2>
-                <div className="w-full">
+
                     {renderQuestionContent()}
-                </div>
+                
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={handleNext}
-                        className="bg-[#49b9ff] hover:bg-[#3ca6df] text-black font-semibold px-5 sm:px-6 py-2 rounded-full transition"
+                        className="bg-[#49b9ff] hover:bg-[#3ca6df] text-black font-semibold px-5 sm:px-6 py-2 rounded-full transition cursor-pointer"
                     >
                         Next
                     </button>
@@ -195,7 +199,7 @@ function PartnerForm() {
                         not everyone is at the right stage to go out on 'Hunt' while delegating <br className="hidden sm:block" /> their tasks. Find it out yourself whether you're in for a hunt or a hustle…
                     </p>
 
-                    <div className="bg-[#141f3a] p-4 sm:p-6 rounded-xl space-y-4 shadow-lg min-h-[300px] flex flex-col justify-center items-center text-center">
+                    <div className="bg-[#141f3a]  mt-8 p-6 rounded-2xl shadow-xl max-w-full min-h-[300px] flex flex-col justify-center items-center">
                         {/* The interactive quiz content is rendered here */}
                         {renderQuizContent()}
                     </div>

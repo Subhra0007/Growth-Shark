@@ -95,14 +95,14 @@ function PartnerForm() {
                     type={currentQuestion.type}
                     name={currentQuestion.id}
                     placeholder={`Write your ${currentQuestion.id} here...`}
-                    className="w-full px-6 py-4 rounded-full bg-[#1e3a47] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#49b9ff] transition text-base"
+                    className="w-full px-6 py-4 rounded-full bg-[#1e3a47] text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#49b9ff] transition text-base mt-5"
                     value={answers[currentQuestion.id] || ''}
                     onChange={handleInputChange}
                 />
             );
         } else {
             return (
-                <div className="flex flex-col space-y-4">
+                <div className="flex flex-col space-y-4 mt-5">
                     {currentQuestion.options.map((option, index) => (
                         <label key={index} className="flex items-center space-x-3 text-lg cursor-pointer">
                             <input
@@ -159,7 +159,7 @@ function PartnerForm() {
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={handleNext}
-                        className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-8 py-3 rounded-full transition text-base"
+                        className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-8 py-3 rounded-full transition text-base C"
                     >
                         Next
                     </button>

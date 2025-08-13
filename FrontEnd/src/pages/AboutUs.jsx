@@ -46,7 +46,7 @@ export default function AboutSection() {
 
       {/* Top Section */}
       <section className="relative max-w-6xl mx-auto py-32 grid md:grid-cols-2 gap-12 z-10">
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <h4 className="text-sm uppercase text-sky-400 tracking-widest mb-2">
             Our Story
           </h4>

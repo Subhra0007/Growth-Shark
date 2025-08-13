@@ -77,15 +77,15 @@ export default function Career() {
       <div className="px-6">
         {/* Hero Section */}
         <section className="max-w-6xl mx-auto pt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h1 className="text-6xl font-extrabold leading-tight mb-6">
+          <div className="text-center lg:text-left mx-auto lg:mx-0">
+            <h1 className="lg:text-6xl text-4xl  font-extrabold leading-tight mb-6">
               Join <span className="text-sky-400">GrowthShark</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8">
               Shape the future with us! Explore exciting opportunities and grow your career with a team
               that values innovation, collaboration, and excellence.
             </p>
-            <img src={career} alt="career" className="w-64 md:w-80 drop-shadow-lg" />
+            <img src={career} alt="career" className="w-64 md:w-80 drop-shadow-lg mx-auto lg:mx-0" />
           </div>
 
           {/* Form Section */}
@@ -191,22 +191,22 @@ export default function Career() {
         {/* Benefits Section */}
         <section className="max-w-6xl mx-auto py-16">
           <h2 className="text-4xl font-bold mb-6 text-center">Why Join Us?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mt-10">
             {[
               { title: "Growth & Learning", text: "We provide continuous opportunities to learn and grow in your career." },
               { title: "Collaborative Culture", text: "Work with a supportive team that values innovation and teamwork." },
               { title: "Impactful Work", text: "Be part of meaningful projects that create real-world impact." },
             ].map((benefit, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg backdrop-blur">
+              <div key={idx} className="bg-gradient-to-br from-[#0b223f]/60 to-[#06263f]/40 p-6 rounded-2xl shadow-lg border border-white/10 backdrop-blur-sm hover:shadow-sky-500/40 hover:scale-[1.02] transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.text}</p>
+                <p className="text-gray-300 ">{benefit.text}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Interview Process */}
-        <section className="max-w-6xl mx-auto py-16">
+        <section className="max-w-6xl mx-auto py-6">
           <h3 className="text-4xl font-bold mb-3 text-center">Interview Process</h3>
           <p className="text-center mb-10 text-gray-400">At GrowthShark, we aim to make the hiring journey smooth and transparent. Here’s a detailed breakdown of our process:</p>
 

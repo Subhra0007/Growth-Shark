@@ -35,7 +35,11 @@ export default async function handler(req, res) {
     replyTo: email,
     to: process.env.EMAIL_TO, // Send to yourself
     subject: `New Message from ${name}`,
-    text: message,
+    text:`
+     Name: ${name}
+     Email: ${email}
+     message: ${message}
+    `
   };
 
   try {
