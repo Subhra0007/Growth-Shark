@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import FooterBg from '../assets/Footer.png';
 import logo from '../assets/logo.png';
@@ -19,7 +20,7 @@ export default function Footer() {
       </div> */}
 
       {/* Footer Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 md:px-16 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 ">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 flex lg:flex-row flex-col justify-evenly gap-10 mt-15">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center text-center">
           <img src={logo} alt="GrowthShark" className="w-24 mb-4" />
@@ -31,25 +32,122 @@ export default function Footer() {
 
         {/* Menu */}
         <div className="flex flex-col items-center text-center">
-          <h3 className="text-xl font-bold mb-3">Menu</h3>
-          <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-            <li className="hover:text-white transition">Services</li>
-            <li className="hover:text-white transition">Case Studies</li>
-            <li className="hover:text-white transition">About Us</li>
-            <li className="hover:text-white transition">Blog</li>
-          </ul>
-        </div>
+  <h3 className="text-xl font-bold mb-3">Menu</h3>
+  <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+    <li>
+      <Link to="/" className="hover:text-white transition">
+        Home
+      </Link>
+    </li>
+   <li>
+      <Link to="/career" className="hover:text-white transition">
+        Career
+      </Link>
+    </li>
+    <li>
+      <Link to="/about" className="hover:text-white transition">
+        About Us
+      </Link>
+    </li>
+     <li>
+      <Link to="/portfolio" className="hover:text-white transition">
+        Portfolio
+      </Link>
+    </li>
+    <li>
+      <Link to="/contact" className="hover:text-white transition">
+        Contact Us
+      </Link>
+    </li>
+  </ul>
+</div>
 
-        {/* Useful Links */}
-        <div className="flex flex-col items-center text-center">
-          <h3 className="text-xl font-bold mb-3">Useful Links</h3>
-          <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-            <li className="hover:text-white transition">Terms</li>
-            <li className="hover:text-white transition">Career</li>
-            <li className="hover:text-white transition">Privacy Policy</li>
-            <li className="hover:text-white transition">Contact</li>
-          </ul>
-        </div>
+        {/* Useful Links
+         <div className="flex flex-col items-center text-center">
+  <h3 className="text-xl font-bold mb-3">Services</h3>
+  <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+    <li>
+      <Link to="/services/automation" className="hover:text-white transition">
+        Automation & Personalization
+      </Link>
+    </li>
+   <li>
+      <Link to="/services/b2b" className="hover:text-white transition">
+        B2B SEO
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/blog" className="hover:text-white transition">
+        Blog Writing
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communityengagement" className="hover:text-white transition">
+        Community Engagement
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/contentcreation" className="hover:text-white transition">
+         Content Creation & Scheduling
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/copywriting" className="hover:text-white transition">
+         Copywriting
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/ecommerce" className="hover:text-white transition">
+        E-commerce SEO
+      </Link>
+    </li>
+    <li>
+      <Link to="/services/emailcampaign" className="hover:text-white transition">
+         Email Campaigns
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/emailmarketing" className="hover:text-white transition">
+        Email Marketing
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+     <li>
+      <Link to="/services/communitymanagement" className="hover:text-white transition">
+         Community Management
+      </Link>
+    </li>
+  </ul>
+</div> */}
 
         {/* Contact + Social */}
         <div className="flex flex-col items-center text-center">
@@ -88,7 +186,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-4">
+      <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-6 max-w-6xl mx-auto mt-10">
         © 2025 Proriterz. All Rights Reserved.
       </div>
     </footer>

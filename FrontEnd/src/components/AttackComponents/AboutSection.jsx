@@ -241,7 +241,7 @@ const AboutSection = () => {
   allowTouchMove={false}
   modules={[Autoplay, FreeMode]}
 >
-  {[...logos, ...logos, ...logos].map((logo, i) => (
+  {[...logos, ...logos, ...logos,...logos,...logos].map((logo, i) => (
     <SwiperSlide
       key={i}
       className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"

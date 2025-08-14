@@ -17,9 +17,9 @@ export default function Navbar({ toggleMode, isStealth }) {
     { name: "Home", link: "/" },
     { name: "Services", link: "" },
     { name: "Career", link: "/career" },
-    { name: "About", link: "/about" },
+    { name: "About Us", link: "/about" },
     { name: "Portfolio", link: "/portfolio" },
-    { name: "Contact", link: "/contact" },
+    { name: "Contact Us", link: "/contact" },
   ];
 
   const services = [

@@ -38,9 +38,13 @@ function ReadyForHunt() {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-lime-400 hover:bg-lime-300 text-black font-semibold px-8 py-3 rounded-full shadow-md text-sm sm:text-base transition duration-300">
+         <a
+            href="https://calendly.com/proriterz101/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-lime-400 hover:bg-lime-300 text-black font-semibold px-8 py-3 rounded-full shadow-md text-sm sm:text-base transition duration-300">
           Book Your Discovery Session →
-        </button>
+        </a>
       </div>
     </section>
   );
