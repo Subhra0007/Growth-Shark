@@ -9,7 +9,7 @@ import { FiYoutube } from "react-icons/fi";
 function Services() {
   return (
     <>
-      <div className="bg-black py-16 sm:py-20 lg:py-24 px-6 relative ">
+      <div className="bg-black py-16 sm:py-16 lg:py-16 px-6 relative ">
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
             <div className="w-[700px] h-[900px] bg-[#2ea9ff]/20 rounded-full blur-3xl"></div>
       </div>      

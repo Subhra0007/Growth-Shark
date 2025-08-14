@@ -55,7 +55,7 @@ const Why = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="relative z-10 mt-10 sm:mt-12 text-center mb-20 ">
+            <div className="relative z-10 mt-10 sm:mt-12 text-center mb-10 ">
                 <a
                         href="https://calendly.com/proriterz101/30min"
                         target="_blank"
