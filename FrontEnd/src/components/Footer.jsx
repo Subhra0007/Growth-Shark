@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import FooterBg from '../assets/Footer.png';
-import logo from '../assets/logo.png';
-
+import FooterLogo from '../assets/FooterLogo.png'
 export default function Footer() {
   return (
     <footer className="relative text-white overflow-hidden bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] py-5">
@@ -23,7 +22,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex lg:flex-row flex-col justify-evenly gap-10 mt-15">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center text-center">
-          <img src={logo} alt="GrowthShark" className="w-24 mb-4" />
+          <img src={FooterLogo} alt="FooterLogo" className="w-24 mb-4" />
           <p className="text-base sm:text-lg font-semibold leading-relaxed">
             It's Time To Pull In A <br />
             <span className="text-sky-400">Professional</span>
