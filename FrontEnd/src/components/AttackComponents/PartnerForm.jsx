@@ -169,7 +169,7 @@ function PartnerForm() {
     };
 
     return (
-        <div className="max-w-6xl mx-auto relative bg-black text-white px-4 sm:px-8 md:px-16 lg:px-20 overflow-hidden">
+        <div className="max-w-6xl mx-auto relative bg-black text-white px-4 sm:px-8 md:px-16 lg:px-20 overflow-hidden ">
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                 <div className="w-[450px] h-[450px] bg-[#2ea9ff]/20 rounded-full blur-3xl"></div>
             </div>

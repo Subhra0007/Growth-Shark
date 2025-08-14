@@ -46,7 +46,8 @@ export default function AboutSection() {
       </div>
 
       {/* Top Section */}
-      <section className="relative max-w-6xl mx-auto py-32 grid md:grid-cols-2 gap-12 z-10">
+      <section className=" pt-32 pb-10">
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 z-10">
         <div className="flex flex-col ">
           <h4 className="text-sm uppercase text-sky-400 tracking-widest mb-2">
             Our Story
@@ -59,15 +60,17 @@ export default function AboutSection() {
           <p>
             At GrowthShark, we don't just tell stories; we create experiences. Our journey began with a simple, yet powerful idea: to change the way content is crafted and shared. With creativity as our fuel and innovation as our compass, we set out to break away from traditional storytelling and bring fresh, captivating content to the world. What started as a small team of passionate storytellers has since grown into a powerhouse of creative minds, each dedicated to transforming the ordinary into something extraordinary.
           </p>
-          <p>
+        </div>
+      </div>
+      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 z-10 py-10">
+         <p>
             From day one, we've believed that every piece of content has the potential to inspire, inform, and impact. Whether we're working with clients to develop their brand's voice, creating compelling narratives, or delivering cutting-edge digital content, our goal is the same: to leave a lasting impression. Our approach is built on a foundation of authenticity, originality, and meticulous attention to detail. We don't just create content that fills space—we create content that resonates, sparks conversation, and connects with audiences on a deeper level.
           </p>
           <p>
             As we've grown, we've never lost sight of our core values. We continue to challenge the status quo, experimenting with new formats, technologies, and platforms to deliver content that stands out. Every project we take on is an opportunity to push boundaries, explore new ideas, and redefine the limits of creativity. Our journey is far from over, and with each new chapter, we're writing content like you've never had before—content that inspires, engages, and leaves.
           </p>
-        </div>
-      </section>
-
+      </div>
+    </section>
       {/* Image */}
       <div className="relative max-w-6xl mx-auto  z-10">
         <img
@@ -81,7 +84,7 @@ export default function AboutSection() {
           ref={statsRowRef}
           className="grid grid-cols-1 sm:grid-cols-3 text-center text-sky-400 font-bold text-xl gap-8 mb-12"
         >
-          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition">
+          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition border border-white/10">
             <p className="text-3xl">
               <Counter target={7} start={statsInView} />
             </p>
@@ -89,7 +92,7 @@ export default function AboutSection() {
               Years Experience
             </p>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition">
+          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition border border-white/10">
             <p className="text-3xl">
               <Counter target={215} start={statsInView} />
             </p>
@@ -97,7 +100,7 @@ export default function AboutSection() {
               Completed Projects
             </p>
           </div>
-          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition">
+          <div className="bg-black/30 rounded-lg p-6 backdrop-blur-md hover:bg-black/50 transition border border-white/10">
             <p className="text-3xl">
               <Counter target={100} start={statsInView} />
             </p>

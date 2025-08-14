@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className="relative text-white overflow-hidden bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] py-5">
       {/* Glow */}
-      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+      {/* <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
         <div className="w-[900px] h-[300px] bg-sky-400/20 rounded-full blur-3xl"></div>
-      </div>
+      </div> */}
       {/* Always show background image */}
       {/* <div className="absolute inset-0 z-0 pointer-events-none">
         <img

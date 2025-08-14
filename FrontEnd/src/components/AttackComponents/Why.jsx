@@ -2,7 +2,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Why = () => {
     return (
-        <div className='bg-black text-white overflow-hidden px-6'>
+        <div className='bg-black text-white overflow-hidden px-6 pt-16 pb-6'>
         <section className="max-w-6xl mx-auto relative  ">
             {/* Center Glow */}
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">

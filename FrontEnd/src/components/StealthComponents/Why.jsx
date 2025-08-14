@@ -2,7 +2,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Why = () => {
     return (
-        <section className=" text-white px-6 overflow-hidden">
+        <section className=" text-white px-6 overflow-hidden py-16 ">
            
             {/* Header */}
             <div className=" max-w-4xl mx-auto text-center mb-8">
@@ -51,7 +51,7 @@ const Why = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="relative z-10 mt-10 sm:mt-12 text-center mb-20 ">
+            <div className="relative z-10 mt-10 sm:mt-12 text-center mb-10 ">
                 <a
                 href="https://calendly.com/proriterz101/30min"
                 target="_blank"

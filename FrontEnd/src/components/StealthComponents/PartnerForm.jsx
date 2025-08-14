@@ -184,7 +184,7 @@ function PartnerForm() {
     // Main component JSX
     return (
         <div>
-            <div className=" max-w-6xl mx-auto flex items-center justify-center text-white px-4 sm:px-8 md:px-16 lg:px-20 py-10">
+            <div className=" max-w-6xl mx-auto flex items-center justify-center text-white px-6 sm:px-8 md:px-16 pb-16 pt-6">
                 <div className="text-center space-y-6 w-full max-w-4xl max-auto">
                     <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 sm:mb-6">
                         Are You Ready For A <br />
@@ -199,7 +199,7 @@ function PartnerForm() {
                         not everyone is at the right stage to go out on 'Hunt' while delegating <br className="hidden sm:block" /> their tasks. Find it out yourself whether you're in for a hunt or a hustle…
                     </p>
 
-                    <div className="bg-[#141f3a]  mt-8 p-6 rounded-2xl shadow-xl max-w-full min-h-[300px] flex flex-col justify-center items-center">
+                    <div className="backdrop-blur-md bg-[#141f3a]/60 transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-white mt-8 max-w-full min-h-[300px] flex flex-col justify-center items-center">
                         {/* The interactive quiz content is rendered here */}
                         {renderQuizContent()}
                     </div>

@@ -12,49 +12,57 @@ import 'swiper/css/navigation';
 
 const testimonials = [
     {
-        name: 'Tom Ford',
+        firstname: 'Tom',
+        lastname: 'Ford',
         position: 'CEO, Iennep',
         testimonial: 'Their design process was smooth and easy to follow. Highly recommend.',
         avatar: Image1,
     },
     {
-        name: 'Devid Dee',
+        firstname: 'Devid',
+        lastname: 'Dee',
         position: 'CEO, Deepstack',
         testimonial: 'Impressive results in record time. These guys know what they’re doing.',
         avatar: Image2,
     },
     {
-        name: 'Jacob Thomason',
+        firstname: 'Jacob',
+        lastname: 'Thomason',
         position: 'CEO, Rentpost',
         testimonial: 'Very professional team that delivered beyond expectations!',
         avatar: Image3,
     },
     {
-        name: 'Jenny Mark',
+        firstname: 'Jenny',
+        lastname: 'Mark',
         position: 'CEO, Cofi',
         testimonial: 'Loved working with them. Great results and support throughout.',
         avatar: Image1,
     },
     {
-        name: 'Tom Ford',
+        firstname: 'Tom',
+        lastname: 'Ford',
         position: 'CEO, Iennep',
         testimonial: 'Their design process was smooth and easy to follow. Highly recommend.',
         avatar: Image2,
     },
     {
-        name: 'Devid Dee',
+       firstname: 'Devid',
+       lastname: 'Dee',
         position: 'CEO, Deepstack',
         testimonial: 'Impressive results in record time. These guys know what they’re doing.',
         avatar: Image3,
     },
     {
-        name: 'Jacob Thomason',
+        firstname: 'Jacob',
+        lastname: 'Thomason',
         position: 'CEO, Rentpost',
         testimonial: 'Very professional team that delivered beyond expectations!',
         avatar: Image2,
     },
     {
-        name: 'Jenny Mark',
+        firstname: 'Jenny',
+        lastname: 'Mark',
         position: 'CEO, Cofi',
         testimonial: 'Loved working with them. Great results and support throughout.',
         avatar: Image3,
@@ -131,8 +139,9 @@ export default function Testimonials() {
                                             alt={item.name}
                                             className="w-24 h-24 rounded-full mb-2 object-cover"
                                         />
-                                        <h4 className="text-lg font-semibold">{item.name}</h4>
-                                        <p className="text-sm">{item.position}</p>
+                                        <h4 className="text-lg font-semibold">{item.firstname}</h4>
+                                        <h4 className="text-lg font-semibold">{item.lastname}</h4>
+                                        <p className="text-sm mt-5">{item.position}</p>
                                     </div>
 
                                     {/* Testimonial */}

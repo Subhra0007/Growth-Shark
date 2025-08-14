@@ -102,7 +102,7 @@ const AboutSection = () => {
   </p>
 </div>
         <div className="lg:w-1/2">
-          <div className="bg-[#141f3a] bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white ">
+          <div className="backdrop-blur-md bg-[#141f3a]/60 transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-white ">
             <form className='space-y-6 '  onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input 
@@ -197,7 +197,7 @@ const AboutSection = () => {
       </div>
 
       {/* Auto Slider for Logos */}
-                  <div className="mt-20 relative z-10">
+                  <div className="mt-30 relative z-10">
                       <h2 className="text-4xl font-bold mb-6 text-center text-[#2ea9ff]">Those Who Hunted With Us</h2>
       
                       {/* Side Blur */}
@@ -233,7 +233,7 @@ const AboutSection = () => {
 
       {/* Cards Section */}
       {/* Cards Section Heading */}
-<div className="text-center max-w-6xl mx-auto mt-24 mb-5 ">
+<div className="text-center max-w-6xl mx-auto mt-30 mb-20 ">
   <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
     The <span className="text-[#49b9ff]">Stealth Formula</span> Of Ours,
     <br /> Is Based On
@@ -242,7 +242,7 @@ const AboutSection = () => {
 
 {/* Cards Grid */}
    {/* Cards Grid */}
-<div className="relative lg:h-[450px]  flex flex-col lg:flex-row items-center justify-between gap-10 max-w-6xl mx-auto">
+<div className="relative  flex flex-col lg:flex-row items-center justify-between gap-10 max-w-6xl mx-auto mb-10">
 
   {/* Card 1 */}
   <div

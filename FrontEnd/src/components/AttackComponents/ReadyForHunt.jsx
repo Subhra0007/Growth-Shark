@@ -4,7 +4,7 @@ function ReadyForHunt() {
   const [company, setCompany] = useState("");
 
   return (
-    <section className="relative bg-black text-white px-6 py-6 overflow-hidden  max-w-6xl mx-auto">
+    <section className="relative bg-black text-white px-6 py-16 overflow-hidden  max-w-6xl mx-auto">
       {/* Glow */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
         <div className="w-[300px] h-[300px] bg-sky-400/20 rounded-full blur-3xl"></div>

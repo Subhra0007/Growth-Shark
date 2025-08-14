@@ -4,7 +4,7 @@ function ReadyForHunt() {
   const [company, setCompany] = useState("");
 
   return (
-    <section className="text-white px-6 py-6 overflow-hidden max-w-6xl mx-auto">
+    <section className="text-white px-6 py-16 overflow-hidden max-w-6xl mx-auto">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">

@@ -58,7 +58,7 @@ export default function handler(req, res) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       replyTo: email,
-      to: process.env.EMAIL_TO,
+      to: process.env.EMAIL_CAREER_TO,
       subject: `New Career Form Submission from ${name}`,
       text: `
         Name: ${name}

@@ -221,7 +221,7 @@ const AboutSection = () => {
       </div>
     </div>
             {/* Logos Slider */}
-            <div className="mt-20 relative z-10">
+            <div className="mt-30 relative z-10 ">
                 <h2 className="text-4xl font-bold mb-6 text-center text-[#2ea9ff]">Those Who Hunted With Us</h2>
               {/* Left fade */}
               <div className="hidden lg:block pointer-events-none absolute top-0 left-0 h-full w-34 bg-gradient-to-r from-black to-transparent z-10"></div>
@@ -258,7 +258,7 @@ const AboutSection = () => {
             </div>
 
             {/* Cards Section */}
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 mt-24 mb-15">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 mt-30 mb-20">
   {/* Text Section */}
   <div className="space-y-6 text-center lg:text-left mx-auto lg:mx-0">
     <h1 className="text-4xl font-bold text-white">How We Do It.</h1>
@@ -268,10 +268,6 @@ const AboutSection = () => {
       <li>→ From Art To Science</li>
     </ul>
   </div>
-
-  
-
-
 
     {/* Cards Section */}
     <div className="relative lg:h-[500px] flex flex-col items-center gap-12 lg:mb-25 lg:block">

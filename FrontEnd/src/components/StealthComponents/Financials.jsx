@@ -2,7 +2,7 @@ import StealthFinancial from '..//../assets/StealthFinancial.png';
 
 function Financials() {
   return (
-    <section className="text-white px-4 sm:px-6 py-12 overflow-hidden max-w-6xl mx-auto">
+    <section className="text-white px-6 py-12 overflow-hidden max-w-6xl mx-auto">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
           Transparent <span className="text-[#44c8ff]">Financials</span>
