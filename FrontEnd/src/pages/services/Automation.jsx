@@ -5,7 +5,7 @@ export default function Automation() {
   const text = "text-gray-300 text-sm";
 
   return (
-    <section className="bg-gradient-to-br from-black via-[#0b223f] to-[#06263f] text-white px-6 py-20 sm:py-28">
+    <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
       <div className=" space-y-20">
         {/* Hero */}
         <div className="text-center max-w-6xl mx-auto">
