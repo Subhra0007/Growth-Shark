@@ -6,7 +6,8 @@ export default function Footer() {
   return (
     <footer className="relative text-white overflow-hidden bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] ">
       {/* Footer Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 flex lg:flex-row flex-col justify-evenly gap-10 mt-15 py-5 border-t border-white/40">
+      <div className="top-0  py-5 border-t border-white/40 max-w-6xl mx-auto"></div>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 flex lg:flex-row flex-col justify-evenly gap-10 mt-15 ">
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center text-center">
           <img src={FooterLogo} alt="FooterLogo" className="w-24 mb-4" />
