@@ -150,7 +150,7 @@ function PartnerForm() {
                 return (
                     <>
                         <h3 className="text-xl sm:text-2xl font-bold">Apologies, you still need to stay stealthy before you can go out for delegation.</h3>
-                        <a href="https://calendly.com/proriterz101/30min" className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-5 sm:px-8 py-2 sm:py-3 rounded-full transition text-sm sm:text-base mt-4 sm:mt-6 inline-block">
+                        <a href="https://calendly.com/proriterz101/30min" className="bg-lime-400  hover:bg-lime-300 text-black font-semibold px-5 sm:px-8 py-2 sm:py-3 rounded-full transition text-sm sm:text-base mt-4 sm:mt-6 inline-block">
                             Schedule a free consultation here
                         </a>
                     </>
@@ -172,7 +172,7 @@ function PartnerForm() {
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={handleNext}
-                        className="bg-[#49b9ff] hover:bg-[#3ca6df] text-black font-semibold px-5 sm:px-6 py-2 rounded-full transition cursor-pointer"
+                        className="bg-lime-400  hover:bg-lime-300 text-black font-semibold px-5 sm:px-6 py-2 rounded-full transition cursor-pointer"
                     >
                         Next
                     </button>
@@ -199,7 +199,7 @@ function PartnerForm() {
                         not everyone is at the right stage to go out on 'Hunt' while delegating <br className="hidden sm:block" /> their tasks. Find it out yourself whether you're in for a hunt or a hustle…
                     </p>
 
-                    <div className="backdrop-blur-md bg-[#141f3a]/60 transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-white mt-8 max-w-full min-h-[300px] flex flex-col justify-center items-center">
+                    <div className="backdrop-blur-md bg-[#141f3a]/60 transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-white mt-8 max-w-3xl mx-auto min-h-[300px] flex flex-col justify-center items-center">
                         {/* The interactive quiz content is rendered here */}
                         {renderQuizContent()}
                     </div>

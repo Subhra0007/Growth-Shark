@@ -102,7 +102,7 @@ const AboutSection = () => {
   </p>
 </div>
         <div className="lg:w-1/2">
-          <div className="backdrop-blur-md bg-[#141f3a]/60 transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-white ">
+          <div className="backdrop-blur-md bg-[#71b5f0]  transition-transform duration-300 border border-white/10 p-6 bg-opacity-80 rounded-xl  shadow-lg text-black ">
             <form className='space-y-6 '  onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input 
@@ -136,7 +136,7 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm text-gray-400">Service you're interested in:</label>
+              <label className="block mb-1 text-sm text-black">Service you're interested in:</label>
               <select 
               name="service"
               value={formData.service}
@@ -165,7 +165,7 @@ const AboutSection = () => {
             </textarea>
 
             <div>
-              <label className="block mb-1 text-sm text-gray-400">
+              <label className="block mb-1 text-sm text-black">
                 What's your monthly recurring revenue?
               </label>
               <select 
@@ -183,7 +183,7 @@ const AboutSection = () => {
               <button 
               type="submit"
               disabled={loading}
-              className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer">
+              className="py-2 px-6 bg-lime-400  hover:bg-lime-300 text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer">
                 {loading ? "Submitting..." : "Submit"}
               </button>
             </div>

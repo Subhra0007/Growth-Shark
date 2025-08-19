@@ -91,16 +91,16 @@ export default function Career() {
           {/* Form Section */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/10"
+            className="bg-[#71b5f0] backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/10 text-gray-900"
           >
-            <h2 className="text-3xl font-semibold mb-2">Application Form</h2>
-            <p className="text-gray-400 mb-6">
+            <h2 className="text-3xl font-semibold mb-2 text-black">Application Form</h2>
+            <p className="text-gray-900 mb-6">
               Fill in your details and we’ll get back to you soon.
             </p>
 
             <div className="space-y-4">
               <div>
-                <label className="block mb-1 text-sm">Name</label>
+                <label className="block mb-1 text-sm text-gray-900">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -113,7 +113,7 @@ export default function Career() {
               </div>
 
               <div>
-                <label className="block mb-1 text-sm">
+                <label className="block mb-1 text-sm text-gray-900">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -129,7 +129,7 @@ export default function Career() {
 
               <div className="flex gap-x-2">
                 <div>
-                  <label className="block mb-1 text-sm">
+                  <label className="block mb-1 text-sm text-gray-900">
                     Country Code <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -142,7 +142,7 @@ export default function Career() {
                   />
                 </div>
                 <div className="flex-1">
-                  <label className="block mb-1 text-sm">
+                  <label className="block mb-1 text-sm text-gray-900">
                     WhatsApp Number <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -158,7 +158,7 @@ export default function Career() {
               </div>
 
               <div>
-                <label className="block mb-1 text-sm">
+                <label className="block mb-1 text-sm text-gray-900">
                   Upload Resume <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -167,10 +167,10 @@ export default function Career() {
                   accept=".pdf,.doc,.docx"
                   onChange={handleChange}
                   required
-                  className="w-full text-gray-400"
+                  className="w-full text-gray-800"
                 />
                 {formData.resume && (
-                  <p className="text-sky-400 text-xs mt-1">
+                  <p className="text-lime-400  text-xs mt-1">
                     Selected: <span className="font-semibold">{formData.resume.name}</span>
                   </p>
                 )}
@@ -180,7 +180,7 @@ export default function Career() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-6 w-full bg-sky-500 hover:bg-sky-400 text-black font-semibold py-3 rounded-lg transition cursor-pointer"
+              className="mt-6 w-full bg-lime-400  hover:bg-lime-300 text-black font-semibold py-3 rounded-lg transition cursor-pointer"
             >
               {isSubmitting ? "Submitting..." : "Submit Application"}
             </button>

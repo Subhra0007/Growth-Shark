@@ -115,7 +115,7 @@ const AboutSection = () => {
       </div>
 
       <div className="lg:w-1/2">
-        <div className="bg-gray-900 bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-white">
+        <div className="bg-[#71b5f0]  bg-opacity-80 rounded-xl p-6 sm:p-8 shadow-lg text-black">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
@@ -153,7 +153,7 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm text-gray-400">
+              <label className="block mb-1 text-sm text-black">
                 Service you're interested in
               </label>
               <select
@@ -188,7 +188,7 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm text-gray-400">
+              <label className="block mb-1 text-sm text-black">
                 What's your monthly recurring revenue?
               </label>
               <select
@@ -207,7 +207,7 @@ const AboutSection = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="py-2 px-6 bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
+                className="py-2 px-6 bg-lime-400  hover:bg-lime-300 text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer"
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>
