@@ -170,7 +170,7 @@ export default function Career() {
                   className="w-full text-gray-800"
                 />
                 {formData.resume && (
-                  <p className="text-lime-400  text-xs mt-1">
+                  <p className="text-gray-700  text-xs mt-1">
                     Selected: <span className="font-semibold">{formData.resume.name}</span>
                   </p>
                 )}
