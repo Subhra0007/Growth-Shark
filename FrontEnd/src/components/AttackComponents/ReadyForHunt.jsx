@@ -42,7 +42,7 @@ function ReadyForHunt() {
             href="https://calendly.com/proriterz101/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-lime-400 hover:bg-lime-300 text-black font-semibold px-8 py-3 rounded-full shadow-md text-sm sm:text-base transition duration-300">
+            className="bg-lime-400 shadow-lg shadow-black/50 hover:brightness-110 transition text-black font-semibold px-8 py-3 rounded-full  text-sm sm:text-base  duration-300">
           Book Your Discovery Session →
         </a>
       </div>

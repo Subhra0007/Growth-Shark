@@ -183,7 +183,7 @@ const AboutSection = () => {
               <button 
               type="submit"
               disabled={loading}
-              className="py-2 px-6 bg-lime-400  hover:bg-lime-300 text-black font-semibold rounded-full shadow-md transition duration-300 cursor-pointer">
+              className="py-2 px-6 bg-lime-400   text-black font-semibold rounded-full duration-300 cursor-pointer shadow-lg shadow-black/50 hover:brightness-110 transition">
                 {loading ? "Submitting..." : "Submit"}
               </button>
             </div>

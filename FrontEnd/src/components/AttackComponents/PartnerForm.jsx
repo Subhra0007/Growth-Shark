@@ -131,7 +131,7 @@ function PartnerForm() {
                 return (
                     <>
                         <h3 className="text-2xl font-bold">Congratulations, you’re ready for the hunt! 🎉</h3>
-                        <a href="https://calendly.com/proriterz101/30min" className="bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold px-8 py-3 rounded-full transition text-base mt-6 inline-block">
+                        <a href="https://calendly.com/proriterz101/30min" className="bg-lime-400 shadow-lg shadow-black/50 hover:brightness-110 transition text-black font-semibold px-8 py-3 rounded-full  text-base mt-6 inline-block">
                             Schedule a call Here
                         </a>
                     </>
@@ -140,7 +140,7 @@ function PartnerForm() {
                  return (
                     <>
                         <h3 className="text-2xl font-bold">Apologies, you still need to stay stealthy before you can go out for delegation. </h3>
-                        <a href="https://calendly.com/proriterz101/30min" className="bg-lime-400  hover:bg-lime-300 text-black font-semibold px-8 py-3 rounded-full transition text-base mt-6 inline-block">
+                        <a href="https://calendly.com/proriterz101/30min" className="bg-lime-400 shadow-lg shadow-black/50 hover:brightness-110 transition text-black font-semibold px-8 py-3 rounded-full  text-base mt-6 inline-block ">
                             Schedule a free consultation here
                         </a>
                     </>
@@ -159,7 +159,7 @@ function PartnerForm() {
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={handleNext}
-                        className="bg-lime-400  hover:bg-lime-300 text-black font-semibold px-8 py-3 rounded-full transition text-base cursor-pointer "
+                        className="bg-lime-400  shadow-lg shadow-black/50 hover:brightness-110 transition text-black font-semibold px-8 py-3 rounded-full  text-base cursor-pointer "
                     >
                         Next
                     </button>
@@ -190,7 +190,7 @@ function PartnerForm() {
                     But, not everyone is ready to start hunting with us. Find out if you're ready <br /> for the hunt or still in hustle mode:
                 </p>
 
-                <div className="backdrop-blur-md bg-white/5 border border-white/10 mt-8 p-6 rounded-2xl shadow-xl max-w-3xl mx-auto min-h-[300px] flex flex-col justify-center items-center">
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 mt-8 p-6 rounded-2xl shadow-xl max-w-2xl mx-auto  flex flex-col justify-center items-center">
                     {renderQuizContent()}
                 </div>
             </div>

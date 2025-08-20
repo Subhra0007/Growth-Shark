@@ -90,7 +90,7 @@ async function handleSubmit(e) {
           {/* Right Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 shadow-lg space-y-6"
+            className="bg-[#71b5f0] backdrop-blur-lg p-6 rounded-xl border border-white/10 shadow-lg space-y-6"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <input
@@ -99,7 +99,7 @@ async function handleSubmit(e) {
                 placeholder="Name"
                 value={form.name}
                 onChange={handleChange}
-                className="bg-transparent border-b border-gray-500 focus:border-sky-400 outline-none py-2 text-white placeholder-gray-300 transition w-full"
+                className="bg-transparent border-b border-gray-800 focus:border-sky-400 outline-none py-2 text-black placeholder-gray-900 transition w-full"
                 required
               />
               <input
@@ -108,7 +108,7 @@ async function handleSubmit(e) {
                 placeholder="Email*"
                 value={form.email}
                 onChange={handleChange}
-                className="bg-transparent border-b border-gray-500 focus:border-sky-400 outline-none py-2 text-white placeholder-gray-300 transition w-full"
+                className="bg-transparent border-b border-gray-800 focus:border-sky-400 outline-none py-2 text-black placeholder-gray-900 transition w-full"
                 required
               />
             </div>
@@ -117,17 +117,17 @@ async function handleSubmit(e) {
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="w-full bg-transparent border-b border-gray-500 focus:border-sky-400 outline-none py-2 text-white placeholder-gray-300 transition resize-none"
+              className="w-full bg-transparent border-b border-gray-800 focus:border-sky-400 outline-none py-2 text-black placeholder-gray-800 transition resize-none"
               rows="4"
               required
             ></textarea>
             <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400 italic">
+              <p className="text-sm text-gray-800 italic">
                 *We promise not to disclose your personal <br /> information to third parties.
               </p>
               <button
                 type="submit"
-                className="bg-lime-400  hover:bg-lime-300 text-black px-6 py-2 rounded shadow hover:scale-105 transition cursor-pointer"
+                className="bg-lime-400  shadow-lg shadow-black/50 hover:brightness-110  text-black font-semibold py-3 px-6 rounded-lg transition cursor-pointer"
               >
                 Send Message
               </button>
@@ -137,7 +137,7 @@ async function handleSubmit(e) {
         </div>
 
         {/* Map */}
-        <div className="mt-12 w-full h-[450px] max-w-6xl mx-auto">
+        <div className="m-12 w-full h-[450px] max-w-6xl mx-auto">
           <iframe
             title="Bardhaman Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49642.585803087815!2d87.82504918794346!3d23.246215328212315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f849d1ea7e5efd%3A0x4ce71a0a521f8b0e!2sBardhaman%2C%20West%20Bengal!5e1!3m2!1sen!2sin!4v1754377415094!5m2!1sen!2sin"
