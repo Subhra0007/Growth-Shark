@@ -1,7 +1,24 @@
 
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import AboutImage from "../assets/AboutImage.jpg";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// Images
+import AboutImage1 from "../assets/AboutImage1.jpg";
+import AboutImage2 from "../assets/AboutImage2.jpg";
+import AboutImage3 from "../assets/AboutImage3.jpg";
+import AboutImage4 from "../assets/AboutImage4.jpg";
+import AboutImage5 from "../assets/AboutImage5.jpg";
+import AboutImage6 from "../assets/AboutImage6.jpg";
+// import AboutImage7 from "../assets/AboutImage7.jpg";
+
 import { Link } from "react-router-dom";
 
 // Counter component with smooth animation
@@ -71,13 +88,35 @@ export default function AboutSection() {
           </p>
       </div>
     </section>
-      {/* Image */}
-      <div className="relative max-w-6xl mx-auto  z-10">
+  
+      {/* Image Swiper */}
+<div className="relative max-w-6xl mx-auto z-10">
+  <Swiper
+    spaceBetween={20}
+    centeredSlides={true}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
+    }}
+    loop={true}
+    pagination={{
+      clickable: true,
+    }}
+    navigation={true}
+    modules={[Autoplay, Pagination, Navigation]}
+    className="rounded-lg shadow-lg mb-12"
+  >
+    {[AboutImage1, AboutImage2, AboutImage3, AboutImage4, AboutImage5, AboutImage6].map((img, index) => (
+      <SwiperSlide key={index}>
         <img
-          src={AboutImage}
-          alt="AboutImage"
-          className="rounded-lg w-full mb-12 shadow-lg transform hover:scale-[1.02] transition duration-500"
+          src={img}
+          alt={`AboutImage ${index + 1}`}
+          className="rounded-lg w-full h-auto object-cover"
         />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+
 
         {/* Stats Section */}
         <div
