@@ -56,6 +56,7 @@ export default function AboutSection() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white relative overflow-hidden  px-6 ">
+      <div className="max-w-6xl mx-auto pb-16">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="w-96 h-96 bg-sky-500 opacity-20 rounded-full blur-3xl absolute -top-10 -left-10"></div>
@@ -176,6 +177,7 @@ export default function AboutSection() {
           </button>
         </div>
       </div> */}
+    </div>
     </div>
   );
 }
