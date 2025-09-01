@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+const API =
+  import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
 
-const API = import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
+// ✅ Helper function to fix old Cloudways URLs
+const fixImageUrl = (url) => {
+  if (!url) return "https://via.placeholder.com/800x400?text=Image+Not+Found";
+  return url.replace(
+    "wordpress-1281832-4641891.cloudwaysapps.com",
+    "proriterz.com"
+  );
+};
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -33,30 +42,45 @@ export default function BlogPost() {
     fetchPost();
   }, [slug]);
 
-  if (loading) return <p className="text-center p-4">Loading post...</p>;
+  if (loading) return <p className="text-center p-4 text-white">Loading post...</p>;
   if (error) return <p className="text-center text-red-500 p-4">{error}</p>;
 
-  const featuredImage =
-    post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-    "https://via.placeholder.com/800x400?text=No+Image";
+  // ✅ Fix featured image URL
+  const featuredImage = fixImageUrl(
+    post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+  );
+
+  // ✅ Fix content images & links
+  const fixedContent = post?.content?.rendered?.replaceAll(
+    "wordpress-1281832-4641891.cloudwaysapps.com",
+    "proriterz.com"
+  );
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1
-        className="text-3xl font-bold mb-4"
-        dangerouslySetInnerHTML={{ __html: post?.title?.rendered }}
-      />
+    <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-25">
+        
+        {/* Title */}
+        <h1
+          className="text-4xl md:text-5xl font-extrabold text-center text-white leading-snug p-6"
+          dangerouslySetInnerHTML={{ __html: post?.title?.rendered }}
+        />
 
-      <img
-        src={featuredImage}
-        alt={post?.title?.rendered || "Blog Image"}
-        className="w-full rounded-lg mb-6"
-      />
+        {/* Featured Image */}
+        <div className="flex justify-center p-6">
+          <img
+            src={featuredImage}
+            alt={post?.title?.rendered || "Blog Image"}
+            className="rounded-xl shadow-2xl max-h-[450px] w-full object-cover"
+          />
+        </div>
 
-      <div
-        className="prose prose-lg max-w-none"
-        dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
-      />
+        {/* Content */}
+        <div
+          className="prose prose-lg max-w-none text-white p-10"
+          dangerouslySetInnerHTML={{ __html: fixedContent }}
+        />
+      </div>
     </div>
   );
 }

@@ -29,7 +29,8 @@ export default function BlogList() {
   if (err) return <div className="min-h-[50vh] grid place-items-center text-red-500">{err}</div>;
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f]">
+      <div className="max-w-6xl mx-auto px-6 py-16">
       <h1 className="text-3xl font-bold mb-8">Blogs</h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((p) => {
@@ -60,6 +61,7 @@ export default function BlogList() {
             </article>
           );
         })}
+      </div>
       </div>
     </div>
   );

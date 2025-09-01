@@ -55,20 +55,16 @@ function CanonicalHelmet() {
 
 function AppContent() {
   const [isStealth, setIsStealth] = useState(false);
-  const location = useLocation(); // get current path
 
   const toggleMode = () => {
     setIsStealth((prev) => !prev);
   };
 
-  // Paths where Navbar/Footer should be hidden
-  const hideNavFooter = location.pathname.startsWith("/blog");
-
   return (
     <>
       <CanonicalHelmet />
       <ScrollToTop />
-      {!hideNavFooter && <Navbar toggleMode={toggleMode} isStealth={isStealth} />}
+      <Navbar toggleMode={toggleMode} isStealth={isStealth} />
       <Routes>
         <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
         <Route path="/about" element={<About />} />
@@ -102,7 +98,7 @@ function AppContent() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
-      {!hideNavFooter && <Footer />}
+      <Footer />
     </>
   );
 }
