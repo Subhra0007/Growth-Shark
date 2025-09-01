@@ -55,15 +55,24 @@ const Why = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="relative z-10 mt-10 sm:mt-12 text-center mb-10 ">
-                <a
-                        href="https://calendly.com/proriterz101/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#2ea9ff] hover:bg-[#1e8bd8] text-black font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 text-sm sm:text-base">
-                    Get A Free Consultation On How To Be Aggressive
-                </a>
-            </div>
+           {/* CTA Button */}
+<div className="relative z-10 mt-10 sm:mt-12 text-center mb-10">
+  <a
+    href="https://calendly.com/proriterz101/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block max-w-xl mx-auto
+               bg-[#2ea9ff] hover:bg-[#abc7db] text-black font-semibold 
+               px-6 sm:px-8 py-3 rounded-full 
+               transition-all duration-300 
+               text-sm sm:text-base 
+               leading-snug 
+               break-words md:whitespace-nowrap"
+  >
+    Get A Free Consultation On How To Be Aggressive
+  </a>
+</div>
+
         </section>
         </div>
     );

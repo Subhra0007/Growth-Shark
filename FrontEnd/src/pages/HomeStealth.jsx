@@ -9,7 +9,7 @@ import Testimonials from '../components/StealthComponents/Testimonials'
 
 //bg-gradient-to-r from-[#042f4b] via-[#0e4c74] to-[#1b76b3]
 //
-export default function HomeAttack() {
+export default function HomeStealth() {
     return (
         <div className="bg-gradient-to-b from-[#0b223f] to-[#06263f] text-white">
           

@@ -57,7 +57,11 @@ function AppContent() {
   const [isStealth, setIsStealth] = useState(false);
 
   const toggleMode = () => {
-    setIsStealth((prev) => !prev);
+    console.log("Toggling mode, isStealth before:", isStealth);
+    setIsStealth((prev) => {
+      console.log("isStealth after:", !prev);
+      return !prev;
+    });
   };
 
   return (
@@ -67,6 +71,8 @@ function AppContent() {
       <Navbar toggleMode={toggleMode} isStealth={isStealth} />
       <Routes>
         <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
+        <Route path="/attack" element={<HomeAttack />} />
+        <Route path="/stealth" element={<HomeStealth />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />

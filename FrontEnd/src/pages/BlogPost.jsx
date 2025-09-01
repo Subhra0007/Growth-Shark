@@ -58,7 +58,7 @@ export default function BlogPost() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-25">
+      <div className="max-w-6xl mx-auto px-6  py-25">
         
         {/* Title */}
         <h1
