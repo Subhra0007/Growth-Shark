@@ -41,7 +41,7 @@ import VideoContent from "./pages/services/VideoContent";
 function CanonicalHelmet() {
   const location = useLocation();
   // Use environment variable for base URL, fallback to your domain
-  const baseUrl = import.meta.env.VITE_BASE_URL || "https://yourdomain.com";
+   const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:5173";
   // Remove trailing slash for consistency, if needed
   const canonicalUrl = `${baseUrl}${location.pathname.replace(/\/$/, "")}`;
 
