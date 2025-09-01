@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
+const API = import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
+
 export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
@@ -11,9 +14,7 @@ export default function BlogPost() {
     async function fetchPost() {
       try {
         setLoading(true);
-        const res = await fetch(
-          `https://proriterz.com/wp-json/wp/v2/posts?slug=${slug}&_embed`
-        );
+        const res = await fetch(`${API}/posts?slug=${slug}&_embed`);
         if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
         const data = await res.json();
 
