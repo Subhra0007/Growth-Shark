@@ -29,13 +29,14 @@ export default function CommunityManagement() {
         </div>
         <div className="bg-gradient-to-br from-[#0b223f]/60 to-[#06263f]/40 p-6 rounded-xl shadow-md border border-white/10 backdrop-blur hover:shadow-sky-500/40 hover:scale-[1.02] transition-all duration-300">
           <h3 className="text-2xl font-bold mb-3 text-sky-300 text-center">Why Community Management Is a Game-Changer</h3>
-          <p className="text-gray-300 leading-relaxed my-5">
-            <ul className="list-disc list-inside space-y-1">
-              <li>75% of consumers prefer brands that connect with them personally.</li>
-              <li>Engaged communities lead to 233% higher profitability.</li>
-              <li>Brands with communities grow faster and retain longer.</li>
-            </ul>
-          </p>
+         <div className="text-gray-300 leading-relaxed my-5">
+  <ul className="list-disc list-inside space-y-1">
+    <li>75% of consumers prefer brands that connect with them personally.</li>
+    <li>Engaged communities lead to 233% higher profitability.</li>
+    <li>Brands with communities grow faster and retain longer.</li>
+  </ul>
+</div>
+
         </div>
         <div className="bg-gradient-to-br from-[#0b223f]/60 to-[#06263f]/40 p-6 rounded-xl shadow-md border border-white/10 backdrop-blur hover:shadow-sky-500/40 hover:scale-[1.02] transition-all duration-300">
           <h3 className="text-2xl font-bold mb-3 text-sky-300 text-center">How GrowthShark Can Help</h3>
