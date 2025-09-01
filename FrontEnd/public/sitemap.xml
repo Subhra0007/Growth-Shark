@@ -1,153 +1,153 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://growthshark.io/</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq> daily</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/automation</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/b2b</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/blog</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/community-engagement</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/content-creation</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/copywriting</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/ecommerce</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/email-campaign</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/email-marketing</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/facebook-marketing</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/feedback</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/insta-marketing</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/online-engagement</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/social-listening</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/services/video-content</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/career</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://growthshark.io/about</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio/smm1</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio/smm2</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio/pms</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio/ocs</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/portfolio/cb2b</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://growthshark.io/contact</loc>
-<lastmod>2025-08-29</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-</urlset>
+       <url>
+              <loc>https://growthshark.io/</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>daily</changefreq>
+              <priority>1.0</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/automation</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/b2b</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/blog</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/community-engagement</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/content-creation</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/copywriting</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/ecommerce</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/email-campaign</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/email-marketing</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/facebook-marketing</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/feedback</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/insta-marketing</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/online-engagement</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/social-listening</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/services/video-content</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/career</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.8</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/about</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.8</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.8</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio/smm1</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio/smm2</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio/pms</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio/ocs</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/portfolio/cb2b</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.6</priority>
+          </url>
+       <url>
+              <loc>https://growthshark.io/contact</loc>
+              <lastmod>2025-08-29</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>0.8</priority>
+          </url>
+   </urlset>
