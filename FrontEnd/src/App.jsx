@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { HelmetProvider } from "react-helmet-async"; // Correct import
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop"; // import here
+import { useState } from "react";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-
+// Pages
 import HomeStealth from "./pages/HomeStealth";
 import HomeAttack from "./pages/HomeAttack";
 import About from "./pages/AboutUs";
@@ -45,42 +46,44 @@ export default function App() {
   };
 
   return (
-    <Router>
-     <ScrollToTop /> {/* Add here so it runs on every route change */}
-      <Navbar toggleMode={toggleMode} isStealth={isStealth} />
-      <Routes>
-        <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+    <HelmetProvider> {/* Updated to HelmetProvider */}
+      <Router>
+        <ScrollToTop />
+        <Navbar toggleMode={toggleMode} isStealth={isStealth} />
+        <Routes>
+          <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/portfolio" element={<Portfolio />} />
 
-        {/* Portfolio Cases */}
-        <Route path="/portfolio/smm1" element={<Smm1 />} />
-        <Route path="/portfolio/smm2" element={<Smm2 />} />
-        <Route path="/portfolio/pms" element={<PMS />} />
-        <Route path="/portfolio/ocs" element={<OCS />} />
-        <Route path="/portfolio/cb2b" element={<CB2B />} />
+          {/* Portfolio Cases */}
+          <Route path="/portfolio/smm1" element={<Smm1 />} />
+          <Route path="/portfolio/smm2" element={<Smm2 />} />
+          <Route path="/portfolio/pms" element={<PMS />} />
+          <Route path="/portfolio/ocs" element={<OCS />} />
+          <Route path="/portfolio/cb2b" element={<CB2B />} />
 
-        {/* Services */}
-        <Route path="/services/automation" element={<Automation />} />
-        <Route path="/services/b2b" element={<B2B />} />
-        <Route path="/services/blog" element={<Blog />} />
-        <Route path="/services/communityengagement" element={<CommunityEngagement />} />
-        <Route path="/services/communitymanagement" element={<CommunityManagement />} />
-        <Route path="/services/contentcreation" element={<ContentCreation />} />
-        <Route path="/services/copywriting" element={<CopyWriting />} />
-        <Route path="/services/ecommerce" element={<Ecommerce />} />
-        <Route path="/services/emailcampaign" element={<EmailCampaigns />} />
-        <Route path="/services/emailmarketing" element={<EmailMarketing />} />
-        <Route path="/services/facebookmarketing" element={<FacebookMarketing />} />
-        <Route path="/services/feedback" element={<Feedback />} />
-        <Route path="/services/instamarketing" element={<InstaMarketing />} />
-        <Route path="/services/onlineengagement" element={<OnlineEngagement />} />
-        <Route path="/services/sociallistening" element={<SocialListening />} />
-        <Route path="/services/videocontent" element={<VideoContent />} />
-      </Routes>
-      <Footer />
-    </Router>
+          {/* Services */}
+          <Route path="/services/automation" element={<Automation />} />
+          <Route path="/services/b2b" element={<B2B />} />
+          <Route path="/services/blog" element={<Blog />} />
+          <Route path="/services/community-engagement" element={<CommunityEngagement />} />
+          <Route path="/services/community-management" element={<CommunityManagement />} />
+          <Route path="/services/content-creation" element={<ContentCreation />} />
+          <Route path="/services/copywriting" element={<CopyWriting />} />
+          <Route path="/services/ecommerce" element={<Ecommerce />} />
+          <Route path="/services/email-campaign" element={<EmailCampaigns />} />
+          <Route path="/services/email-marketing" element={<EmailMarketing />} />
+          <Route path="/services/facebook-marketing" element={<FacebookMarketing />} />
+          <Route path="/services/feedback" element={<Feedback />} />
+          <Route path="/services/insta-marketing" element={<InstaMarketing />} />
+          <Route path="/services/online-engagement" element={<OnlineEngagement />} />
+          <Route path="/services/social-listening" element={<SocialListening />} />
+          <Route path="/services/video-content" element={<VideoContent />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 }
