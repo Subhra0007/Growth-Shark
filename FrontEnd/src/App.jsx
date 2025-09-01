@@ -12,6 +12,8 @@ import About from "./pages/AboutUs";
 import Contact from "./pages/ContactUs";
 import Career from "./pages/Career";
 import Portfolio from "./pages/Portfolio";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
 
 // Portfolio Case Pages
 import Smm1 from "./pages/portfolio/Smm1";
@@ -38,11 +40,10 @@ import OnlineEngagement from "./pages/services/OnlineEngagement";
 import SocialListening from "./pages/services/SocialListening";
 import VideoContent from "./pages/services/VideoContent";
 
+// Canonical Helmet
 function CanonicalHelmet() {
   const location = useLocation();
-  // Use environment variable for base URL, fallback to your domain
-   const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:5173";
-  // Remove trailing slash for consistency, if needed
+  const baseUrl = import.meta.env.VITE_BASE_URL || "http://localhost:5173";
   const canonicalUrl = `${baseUrl}${location.pathname.replace(/\/$/, "")}`;
 
   return (
@@ -52,50 +53,65 @@ function CanonicalHelmet() {
   );
 }
 
-export default function App() {
+function AppContent() {
   const [isStealth, setIsStealth] = useState(false);
+  const location = useLocation(); // get current path
 
   const toggleMode = () => {
     setIsStealth((prev) => !prev);
   };
 
+  // Paths where Navbar/Footer should be hidden
+  const hideNavFooter = location.pathname.startsWith("/blog");
+
+  return (
+    <>
+      <CanonicalHelmet />
+      <ScrollToTop />
+      {!hideNavFooter && <Navbar toggleMode={toggleMode} isStealth={isStealth} />}
+      <Routes>
+        <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        {/* Portfolio Cases */}
+        <Route path="/portfolio/smm1" element={<Smm1 />} />
+        <Route path="/portfolio/smm2" element={<Smm2 />} />
+        <Route path="/portfolio/pms" element={<PMS />} />
+        <Route path="/portfolio/ocs" element={<OCS />} />
+        <Route path="/portfolio/cb2b" element={<CB2B />} />
+        {/* Services */}
+        <Route path="/services/automation" element={<Automation />} />
+        <Route path="/services/b2b" element={<B2B />} />
+        <Route path="/services/blog" element={<Blog />} />
+        <Route path="/services/community-engagement" element={<CommunityEngagement />} />
+        <Route path="/services/community-management" element={<CommunityManagement />} />
+        <Route path="/services/content-creation" element={<ContentCreation />} />
+        <Route path="/services/copywriting" element={<CopyWriting />} />
+        <Route path="/services/ecommerce" element={<Ecommerce />} />
+        <Route path="/services/email-campaign" element={<EmailCampaigns />} />
+        <Route path="/services/email-marketing" element={<EmailMarketing />} />
+        <Route path="/services/facebook-marketing" element={<FacebookMarketing />} />
+        <Route path="/services/feedback" element={<Feedback />} />
+        <Route path="/services/insta-marketing" element={<InstaMarketing />} />
+        <Route path="/services/online-engagement" element={<OnlineEngagement />} />
+        <Route path="/services/social-listening" element={<SocialListening />} />
+        <Route path="/services/video-content" element={<VideoContent />} />
+        {/* Blog */}
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+      {!hideNavFooter && <Footer />}
+    </>
+  );
+}
+
+export default function App() {
   return (
     <HelmetProvider>
       <Router>
-        <CanonicalHelmet />
-        <ScrollToTop />
-        <Navbar toggleMode={toggleMode} isStealth={isStealth} />
-        <Routes>
-          <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          {/* Portfolio Cases */}
-          <Route path="/portfolio/smm1" element={<Smm1 />} />
-          <Route path="/portfolio/smm2" element={<Smm2 />} />
-          <Route path="/portfolio/pms" element={<PMS />} />
-          <Route path="/portfolio/ocs" element={<OCS />} />
-          <Route path="/portfolio/cb2b" element={<CB2B />} />
-          {/* Services */}
-          <Route path="/services/automation" element={<Automation />} />
-          <Route path="/services/b2b" element={<B2B />} />
-          <Route path="/services/blog" element={<Blog />} />
-          <Route path="/services/community-engagement" element={<CommunityEngagement />} />
-          <Route path="/services/community-management" element={<CommunityManagement />} />
-          <Route path="/services/content-creation" element={<ContentCreation />} />
-          <Route path="/services/copywriting" element={<CopyWriting />} />
-          <Route path="/services/ecommerce" element={<Ecommerce />} />
-          <Route path="/services/email-campaign" element={<EmailCampaigns />} />
-          <Route path="/services/email-marketing" element={<EmailMarketing />} />
-          <Route path="/services/facebook-marketing" element={<FacebookMarketing />} />
-          <Route path="/services/feedback" element={<Feedback />} />
-          <Route path="/services/insta-marketing" element={<InstaMarketing />} />
-          <Route path="/services/online-engagement" element={<OnlineEngagement />} />
-          <Route path="/services/social-listening" element={<SocialListening />} />
-          <Route path="/services/video-content" element={<VideoContent />} />
-        </Routes>
-        <Footer />
+        <AppContent />
       </Router>
     </HelmetProvider>
   );

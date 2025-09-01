@@ -41,6 +41,11 @@ export default function Footer() {
                 Portfolio
               </Link>
             </li>
+       <li>
+<Link to="/blog" className="hover:text-white transition">Blogs</Link>
+</li>
+
+
             <li>
               <Link to="/contact" className="hover:text-white transition">
                 Contact Us

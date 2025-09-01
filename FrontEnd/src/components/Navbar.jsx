@@ -20,6 +20,10 @@ export default function Navbar({ toggleMode, isStealth }) {
     { name: "About Us", link: "/about" },
     { name: "Portfolio", link: "/portfolio" },
     { name: "Contact Us", link: "/contact" },
+    { name: "Blogs", link: "/blog" }
+
+
+
   ];
 
   const services = [
