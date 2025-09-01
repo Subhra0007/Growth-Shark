@@ -66,7 +66,7 @@ export default function Navbar({ toggleMode, isStealth }) {
     });
 
     if (redirectPaths.includes(location.pathname.toLowerCase())) {
-      navigate("/");
+        navigate("/");
     }
   };
 
