@@ -1,5 +1,5 @@
-import { HelmetProvider } from "react-helmet-async"; // Correct import
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
@@ -38,6 +38,20 @@ import OnlineEngagement from "./pages/services/OnlineEngagement";
 import SocialListening from "./pages/services/SocialListening";
 import VideoContent from "./pages/services/VideoContent";
 
+function CanonicalHelmet() {
+  const location = useLocation();
+  // Use environment variable for base URL, fallback to your domain
+  const baseUrl = import.meta.env.VITE_BASE_URL || "https://yourdomain.com";
+  // Remove trailing slash for consistency, if needed
+  const canonicalUrl = `${baseUrl}${location.pathname.replace(/\/$/, "")}`;
+
+  return (
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
+  );
+}
+
 export default function App() {
   const [isStealth, setIsStealth] = useState(false);
 
@@ -46,8 +60,9 @@ export default function App() {
   };
 
   return (
-    <HelmetProvider> {/* Updated to HelmetProvider */}
+    <HelmetProvider>
       <Router>
+        <CanonicalHelmet />
         <ScrollToTop />
         <Navbar toggleMode={toggleMode} isStealth={isStealth} />
         <Routes>
@@ -56,14 +71,12 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/career" element={<Career />} />
           <Route path="/portfolio" element={<Portfolio />} />
-
           {/* Portfolio Cases */}
           <Route path="/portfolio/smm1" element={<Smm1 />} />
           <Route path="/portfolio/smm2" element={<Smm2 />} />
           <Route path="/portfolio/pms" element={<PMS />} />
           <Route path="/portfolio/ocs" element={<OCS />} />
           <Route path="/portfolio/cb2b" element={<CB2B />} />
-
           {/* Services */}
           <Route path="/services/automation" element={<Automation />} />
           <Route path="/services/b2b" element={<B2B />} />
