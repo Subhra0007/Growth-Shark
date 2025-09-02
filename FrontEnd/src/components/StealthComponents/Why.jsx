@@ -56,11 +56,11 @@ const Why = () => {
     href="https://calendly.com/proriterz101/30min"
     target="_blank"
     rel="noopener noreferrer"
-    className="block max-w-xl mx-auto
+    className="block max-w-sm mx-auto
               bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold 
-               px-6 sm:px-8 py-3 rounded-full 
+               p-6  py-4 rounded-full 
                transition-all duration-300 
-               text-sm sm:text-base 
+               text-sm sm:text-sm 
                leading-snug 
                break-words md:whitespace-nowrap"
   >
