@@ -57,7 +57,7 @@ const Why = () => {
     target="_blank"
     rel="noopener noreferrer"
     className="block max-w-xl mx-auto
-               bg-[#2ea9ff] hover:bg-[#abc7db] text-black font-semibold 
+              bg-[#49b9ff] hover:bg-[#3aa8e8] text-black font-semibold 
                px-6 sm:px-8 py-3 rounded-full 
                transition-all duration-300 
                text-sm sm:text-base 
