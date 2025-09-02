@@ -41,41 +41,47 @@ export default function Footer() {
                 Portfolio
               </Link>
             </li>
-       <li>
-<Link to="/blog" className="hover:text-white transition">Blogs</Link>
-</li>
-
-
             <li>
               <Link to="/contact" className="hover:text-white transition">
                 Contact Us
               </Link>
             </li>
+             <li>
+<Link to="/blog" className="hover:text-white transition">Blogs</Link>
+</li>
+
           </ul>
         </div>
 
         {/* Contact + Social */}
         <div className="flex flex-col items-center text-center">
           <h3 className="text-xl font-bold mb-3 text-sky-400">Connect Us</h3>
-          <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-            <li>
-              <a
-                href="mailto:Marketing@Proriterz.Com"
-                className="underline hover:text-white transition"
-              >
-                Marketing@Proriterz.Com
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:Diptesh@Proriterz.Com"
-                className="underline hover:text-white transition"
-              >
-                Diptesh@Proriterz.Com
-              </a>
-            </li>
-            <li className="text-gray-300 font-medium mt-1">+91 83482 96083</li>
-          </ul>
+        <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+  <li>
+    <a
+      href="mailto:Marketing@Proriterz.Com"
+      className="hover:text-white transition"
+    >
+      Marketing@Proriterz.Com
+    </a>
+  </li>
+  <li>
+    <a
+      href="mailto:Diptesh@Proriterz.Com"
+      className="hover:text-white transition"
+    >
+      Diptesh@Proriterz.Com
+    </a>
+  </li>
+  <li>
+    <a
+      href="tel:+918348296083"
+      className="hover:text-white transition"
+    >
+      +91 83482 96083
+    </a>
+  </li>
+</ul>
           <div className="flex gap-4 mt-4 text-sky-300 text-xl">
             <a
               href="https://www.facebook.com"
