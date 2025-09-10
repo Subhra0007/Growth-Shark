@@ -30,8 +30,8 @@ export default function BlogList() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f]">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-8">Blogs</h1>
+      <div className="max-w-6xl mx-auto px-6 py-30">
+      {/* <h1 className="text-3xl font-bold mb-8">Blogs</h1> */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((p) => {
           const media = p._embedded?.["wp:featuredmedia"]?.[0]?.source_url;

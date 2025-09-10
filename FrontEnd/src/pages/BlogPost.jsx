@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const API =
   import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
 
-// ✅ Helper function to fix old Cloudways URLs
+// Helper function to fix old Cloudways URLs
 const fixImageUrl = (url) => {
   if (!url) return "https://via.placeholder.com/800x400?text=Image+Not+Found";
   return url.replace(
@@ -42,15 +42,15 @@ export default function BlogPost() {
     fetchPost();
   }, [slug]);
 
-  if (loading) return <p className="text-center p-4 text-white">Loading post...</p>;
-  if (error) return <p className="text-center text-red-500 p-4">{error}</p>;
+  if (loading)
+    return <p className="text-center p-4 text-white">Loading post...</p>;
+  if (error)
+    return <p className="text-center text-red-500 p-4">{error}</p>;
 
-  // ✅ Fix featured image URL
   const featuredImage = fixImageUrl(
     post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
   );
 
-  // ✅ Fix content images & links
   const fixedContent = post?.content?.rendered?.replaceAll(
     "wordpress-1281832-4641891.cloudwaysapps.com",
     "proriterz.com"
@@ -58,7 +58,17 @@ export default function BlogPost() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
-      <div className="max-w-6xl mx-auto px-6  py-25">
+
+      {/* Custom inline style to force margin between paragraphs */}
+      <style>
+        {`
+          .prose p {
+            margin-bottom: 1.5rem;
+          }
+        `}
+      </style>
+
+      <div className="max-w-6xl mx-auto px-6 py-10">
         
         {/* Title */}
         <h1
@@ -77,7 +87,7 @@ export default function BlogPost() {
 
         {/* Content */}
         <div
-          className="prose prose-lg max-w-none text-white p-10"
+          className="prose prose-lg prose-invert max-w-none text-white mx-auto"
           dangerouslySetInnerHTML={{ __html: fixedContent }}
         />
       </div>
