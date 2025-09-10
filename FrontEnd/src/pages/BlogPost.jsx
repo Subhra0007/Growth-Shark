@@ -59,18 +59,66 @@ export default function BlogPost() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
 
-      {/* Custom inline style to force margin between paragraphs */}
+      {/* Custom styling */}
       <style>
         {`
           .prose p {
+            font-size: 1.125rem; /* Default paragraph size */
+            line-height: 1.8;
             margin-bottom: 1.5rem;
+          }
+
+          .prose p strong {
+            font-size: 1.75rem; /* Bigger highlighted sentences */
+            display: block;
+            text-align: center;
+            margin: 2rem 0;
+            font-weight: bold;
+            color: #ffffff;
+          }
+
+          .prose h1 {
+            font-size: 2.75rem;
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+          }
+
+          .prose h2 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1.75rem;
+          }
+
+          .prose h3 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-top: 1.75rem;
+            margin-bottom: 1.5rem;
+          }
+
+          .prose ul {
+            list-style-type: disc;
+            padding-left: 1.75rem;
+          }
+
+          .prose li {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+          }
+
+          .prose img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            margin: 1.75rem 0;
           }
         `}
       </style>
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-        
-        {/* Title */}
+
+        {/* Blog Title */}
         <h1
           className="text-4xl md:text-5xl font-extrabold text-center text-white leading-snug p-6"
           dangerouslySetInnerHTML={{ __html: post?.title?.rendered }}
@@ -85,7 +133,7 @@ export default function BlogPost() {
           />
         </div>
 
-        {/* Content */}
+        {/* Blog Content */}
         <div
           className="prose prose-lg prose-invert max-w-none text-white mx-auto"
           dangerouslySetInnerHTML={{ __html: fixedContent }}
