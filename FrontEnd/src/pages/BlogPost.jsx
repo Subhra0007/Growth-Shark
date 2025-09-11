@@ -13,6 +13,15 @@ const fixImageUrl = (url) => {
   );
 };
 
+// Helper to make links open in a new tab
+const fixLinks = (html) => {
+  if (!html) return "";
+  return html.replaceAll(
+    /<a /g,
+    '<a target="_blank" rel="noopener noreferrer" '
+  );
+};
+
 export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
@@ -51,27 +60,28 @@ export default function BlogPost() {
     post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
   );
 
-  const fixedContent = post?.content?.rendered?.replaceAll(
-    "wordpress-1281832-4641891.cloudwaysapps.com",
-    "proriterz.com"
+  const fixedContent = fixLinks(
+    post?.content?.rendered?.replaceAll(
+      "wordpress-1281832-4641891.cloudwaysapps.com",
+      "proriterz.com"
+    )
   );
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
-
-      {/* Custom styling */}
       <style>
         {`
           .prose p {
-            font-size: 1.125rem; /* Default paragraph size */
+            font-size: 1.125rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
           }
 
+          /* Highlighted important sentences */
           .prose p strong {
-            font-size: 1.75rem; /* Bigger highlighted sentences */
+            font-size: 1.75rem;
             display: block;
-            text-align: center;
+            text-align: left;
             margin: 2rem 0;
             font-weight: bold;
             color: #ffffff;
@@ -117,14 +127,11 @@ export default function BlogPost() {
       </style>
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-
-        {/* Blog Title */}
         <h1
           className="text-4xl md:text-5xl font-extrabold text-center text-white leading-snug p-6"
           dangerouslySetInnerHTML={{ __html: post?.title?.rendered }}
         />
 
-        {/* Featured Image */}
         <div className="flex justify-center p-6">
           <img
             src={featuredImage}
@@ -133,9 +140,9 @@ export default function BlogPost() {
           />
         </div>
 
-        {/* Blog Content */}
         <div
-          className="prose prose-lg prose-invert max-w-none text-white mx-auto"
+          className="prose prose-lg prose-invert max-w-none text-white mx-auto
+                     [&_a]:text-sky-400 [&_a:hover]:text-sky-500 [&_a:hover]:underline"
           dangerouslySetInnerHTML={{ __html: fixedContent }}
         />
       </div>
