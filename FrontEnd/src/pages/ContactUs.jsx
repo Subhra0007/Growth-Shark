@@ -69,14 +69,14 @@ async function handleSubmit(e) {
           <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 shadow-lg space-y-6 ">
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform">
               <Mail className="w-6 h-6 text-sky-400" />
-              <a href="mailto:marketing@proriterz.com" className="text-lg hover:underline">
-                marketing@proriterz.com
+              <a href="mailto:marketing@grothshark.io" className="text-lg hover:underline">
+                marketing@grothshark.io
               </a>
             </div>
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform">
               <Mail className="w-6 h-6 text-sky-400" />
-              <a href="mailto:diptesh@proriterz.com" className="text-lg hover:underline">
-                diptesh@proriterz.com
+              <a href="mailto:diptesh@growthshark.io" className="text-lg hover:underline">
+                diptesh@growthshark.io
               </a>
             </div>
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform">

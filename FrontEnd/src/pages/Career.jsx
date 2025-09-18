@@ -249,8 +249,12 @@ export default function Career() {
           </p>
           <p>
             <strong>Email:</strong>{" "}
-            <a href="mailto:proriterz101@gmail.com" className="text-sky-400 underline">
-              proriterz101@gmail.com
+            <a href="mailto:marketing@grothshark.io" className="text-sky-400 underline">
+              marketing@grothshark.io
+            </a>
+            <br/> {" "}
+              <a href="mailto:diptesh@growthshark.io" className="text-sky-400 underline">
+              diptesh@growthshark.io
             </a>
           </p>
         </section>

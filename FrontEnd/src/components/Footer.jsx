@@ -59,18 +59,18 @@ export default function Footer() {
         <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
   <li>
     <a
-      href="mailto:Marketing@Proriterz.Com"
+      href="mailto:marketing@grothshark.io"
       className="hover:text-white transition"
     >
-      Marketing@Proriterz.Com
+     marketing@grothshark.io
     </a>
   </li>
   <li>
     <a
-      href="mailto:Diptesh@Proriterz.Com"
+      href="mailto:diptesh@growthshark.io"
       className="hover:text-white transition"
     >
-      Diptesh@Proriterz.Com
+     diptesh@growthshark.io
     </a>
   </li>
   <li>
