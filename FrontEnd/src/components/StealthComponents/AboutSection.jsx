@@ -127,7 +127,7 @@ const AboutSection = () => {
               onChange={handleChange} 
               className="p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
               <input 
-              type="url" 
+              type="text" 
               name="website"
               placeholder="Website URL"
               value={formData.website}
