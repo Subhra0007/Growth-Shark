@@ -3,6 +3,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import FooterLogo from "../assets/FooterLogo.png";
 
 export default function Footer() {
+   const currentYear = new Date().getFullYear();
   return (
     <footer className="relative text-white overflow-hidden bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] ">
       {/* Footer Content */}
@@ -59,10 +60,10 @@ export default function Footer() {
         <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
   <li>
     <a
-      href="mailto:marketing@grothshark.io"
+      href="mailto:marketing@growthshark.io"
       className="hover:text-white transition"
     >
-     marketing@grothshark.io
+    marketing@growthshark.io
     </a>
   </li>
   <li>
@@ -84,19 +85,19 @@ export default function Footer() {
 </ul>
           <div className="flex gap-4 mt-4 text-sky-300 text-xl">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/growthshark"
               className="hover:text-white transition"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/growthshark.io"
               className="hover:text-white transition"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/growth-shark"
               className="hover:text-white transition"
             >
               <FaLinkedinIn />
@@ -106,9 +107,11 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-6 max-w-6xl mx-auto mt-10">
-        © 2025 Proriterz. All Rights Reserved.
-      </div>
+      
+       <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-6 max-w-6xl mx-auto mt-10">
+          © {currentYear} Growth Shark. All Rights Reserved.
+        </div>
+    
     </footer>
   );
 }
