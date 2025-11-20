@@ -23,20 +23,20 @@ import OCS from "./pages/portfolio/OCS";
 import CB2B from "./pages/portfolio/CB2B";
 
 // Services
-import Automation from "./pages/services/Automation";
+// import Automation from "./pages/services/Automation";
 import B2B from "./pages/services/B2B";
 import Blog from "./pages/services/Blog";
-import CommunityEngagement from "./pages/services/CommunityEngagement";
+// import CommunityEngagement from "./pages/services/CommunityEngagement";
 import CommunityManagement from "./pages/services/CommunityManagement";
 import ContentCreation from "./pages/services/ContentCreation";
 import CopyWriting from "./pages/services/CopyWriting";
 import Ecommerce from "./pages/services/Ecommerce";
-import EmailCampaigns from "./pages/services/EmailCampaigns";
+// import EmailCampaigns from "./pages/services/EmailCampaigns";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import FacebookMarketing from "./pages/services/FacebookMarketing";
-import Feedback from "./pages/services/Feedback";
+// import Feedback from "./pages/services/Feedback";
 import InstaMarketing from "./pages/services/InstaMarketing";
-import OnlineEngagement from "./pages/services/OnlineEngagement";
+// import OnlineEngagement from "./pages/services/OnlineEngagement";
 import SocialListening from "./pages/services/SocialListening";
 import VideoContent from "./pages/services/VideoContent";
 
@@ -84,20 +84,20 @@ function AppContent() {
         <Route path="/portfolio/ocs" element={<OCS />} />
         <Route path="/portfolio/cb2b" element={<CB2B />} />
         {/* Services */}
-        <Route path="/services/automation" element={<Automation />} />
+        {/* <Route path="/services/automation" element={<Automation />} /> */}
         <Route path="/services/b2b-seo-service" element={<B2B />} />
         <Route path="/services/blog-writing-service" element={<Blog />} />
-        <Route path="/services/community-engagement" element={<CommunityEngagement />} />
+        {/* <Route path="/services/community-engagement" element={<CommunityEngagement />} /> */}
         <Route path="/services/community-management" element={<CommunityManagement />} />
         <Route path="/services/content-creation" element={<ContentCreation />} />
         <Route path="/services/copywriting-services" element={<CopyWriting />} />
         <Route path="/services/ecommerce-seo-services" element={<Ecommerce />} />
-        <Route path="/services/email-campaign" element={<EmailCampaigns />} />
+        {/* <Route path="/services/email-campaign" element={<EmailCampaigns />} /> */}
         <Route path="/services/email-marketing-services" element={<EmailMarketing />} />
         <Route path="/services/facebook-marketing" element={<FacebookMarketing />} />
-        <Route path="/services/feedback" element={<Feedback />} />
+        {/* <Route path="/services/feedback" element={<Feedback />} /> */}
         <Route path="/services/insta-marketing" element={<InstaMarketing />} />
-        <Route path="/services/online-engagement" element={<OnlineEngagement />} />
+        {/* <Route path="/services/online-engagement" element={<OnlineEngagement />} /> */}
         <Route path="/services/social-listening" element={<SocialListening />} />
         <Route path="/services/video-editing-service" element={<VideoContent />} />
         {/* Blog */}
