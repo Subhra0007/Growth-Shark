@@ -25,21 +25,21 @@ export default function Navbar({ toggleMode, isStealth }) {
 
   const services = [
     { name: "Automation & Personalization", link: "/services/automation" },
-    { name: "B2B SEO", link: "/services/b2b" },
-    { name: "Blog Writing", link: "/services/blog" },
+    { name: "B2B SEO", link: "/services/b2b-seo-service" },
+    { name: "Blog Writing", link: "/services/blog-writing-service" },
     { name: "Community Engagement", link: "/services/community-engagement" },
     { name: "Community Management", link: "/services/community-management" },
     { name: "Content Creation & Scheduling", link: "/services/content-creation" },
-    { name: "Copywriting", link: "/services/copywriting" },
-    { name: "E-commerce SEO", link: "/services/ecommerce" },
+    { name: "Copywriting", link: "/services/copywriting-services" },
+    { name: "E-commerce SEO", link: "/services/ecommerce-seo-services" },
     { name: "Email Campaigns", link: "/services/email-campaign" },
-    { name: "Email Marketing", link: "/services/email-marketing" },
+    { name: "Email Marketing", link: "/services/email-marketing-services" },
     { name: "Facebook Marketing", link: "/services/facebook-marketing" },
     { name: "Feedback & Review Management", link: "/services/feedback" },
     { name: "Instagram Marketing", link: "/services/insta-marketing" },
     { name: "Online Engagement", link: "/services/online-engagement" },
     { name: "Social Listening & Monitoring", link: "/services/social-listening" },
-    { name: "Video Content", link: "/services/video-content" },
+    { name: "Video Content", link: "/services/video-editing-service" },
   ];
 
   const portfolioPaths = [

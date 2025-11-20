@@ -85,21 +85,21 @@ function AppContent() {
         <Route path="/portfolio/cb2b" element={<CB2B />} />
         {/* Services */}
         <Route path="/services/automation" element={<Automation />} />
-        <Route path="/services/b2b" element={<B2B />} />
-        <Route path="/services/blog" element={<Blog />} />
+        <Route path="/services/b2b-seo-service" element={<B2B />} />
+        <Route path="/services/blog-writing-service" element={<Blog />} />
         <Route path="/services/community-engagement" element={<CommunityEngagement />} />
         <Route path="/services/community-management" element={<CommunityManagement />} />
         <Route path="/services/content-creation" element={<ContentCreation />} />
-        <Route path="/services/copywriting" element={<CopyWriting />} />
-        <Route path="/services/ecommerce" element={<Ecommerce />} />
+        <Route path="/services/copywriting-services" element={<CopyWriting />} />
+        <Route path="/services/ecommerce-seo-services" element={<Ecommerce />} />
         <Route path="/services/email-campaign" element={<EmailCampaigns />} />
-        <Route path="/services/email-marketing" element={<EmailMarketing />} />
+        <Route path="/services/email-marketing-services" element={<EmailMarketing />} />
         <Route path="/services/facebook-marketing" element={<FacebookMarketing />} />
         <Route path="/services/feedback" element={<Feedback />} />
         <Route path="/services/insta-marketing" element={<InstaMarketing />} />
         <Route path="/services/online-engagement" element={<OnlineEngagement />} />
         <Route path="/services/social-listening" element={<SocialListening />} />
-        <Route path="/services/video-content" element={<VideoContent />} />
+        <Route path="/services/video-editing-service" element={<VideoContent />} />
         {/* Blog */}
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />

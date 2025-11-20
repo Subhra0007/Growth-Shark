@@ -240,7 +240,7 @@ const AboutSection = () => {
   </h2>
 </div>
 
-{/* Cards Grid */}
+
    {/* Cards Grid */}
 <div className="relative  flex flex-col lg:flex-row items-center justify-between gap-10 max-w-6xl mx-auto mb-10">
 
@@ -282,7 +282,6 @@ const AboutSection = () => {
       </p>
     </div>
   </div>
-
 </div>
                          
     </section>
