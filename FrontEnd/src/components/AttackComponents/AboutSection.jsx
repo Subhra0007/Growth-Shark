@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
-
+import 'swiper/css/autoplay';
+import 'swiper/css/free-mode';
 import img1 from '..//../assets/1.png';
 import img2 from '..//../assets/2.png';
 import img3 from '..//../assets/3.png';
@@ -229,32 +230,57 @@ const AboutSection = () => {
              {/* Right fade */}
              <div className="hidden lg:block pointer-events-none absolute top-0 right-0 h-full w-34 bg-gradient-to-l from-black to-transparent z-10"></div>
 <Swiper
-  slidesPerView="auto"
-  spaceBetween={50}
-  loop={true}
-  speed={4000}
-  autoplay={{
-    delay: 0,
-    disableOnInteraction: false,
-  }}
-  freeMode={true}
-  allowTouchMove={false}
-  modules={[Autoplay, FreeMode]}
->
-  {[...logos, ...logos, ...logos,...logos,...logos].map((logo, i) => (
-    <SwiperSlide
-      key={i}
-      className="!w-auto flex justify-center items-center transition-all duration-300 transform hover:scale-110 cursor-pointer mt-15"
-    >
-      <img
-        src={logo}
-        alt={`Logo ${i + 1}`}
-        className="h-14 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500"
-      />
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+    slidesPerView="auto"
+    spaceBetween={60}
+    loop={true}
+    loopedSlides={logos.length * 3} // Ensures seamless looping
+    centeredSlides={false}
+    speed={2000} // Adjust for faster/slower motion (8000 = smooth & calm)
+    allowTouchMove={false}
+    freeMode={{ enabled: false }}
+    autoplay={{
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // Optional: pauses when hovering the slider
+    }}
+    modules={[Autoplay]}
+    className="swiper-logos"
+  >
+    {/* Duplicate logos multiple times for perfect seamless loop */}
+    {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, i) => (
+      <SwiperSlide
+        key={i}
+        className="!w-auto px-4 py-8 transition-all duration-500"
+      >
+        <div className="group relative">
+          <img
+            src={logo}
+            alt={`Partner logo ${i + 1}`}
+            className="
+              h-14 w-auto mx-auto
+              opacity-50 grayscale 
+              transition-all duration-700 ease-out
+              group-hover:opacity-100 group-hover:grayscale-0 
+              group-hover:scale-125
+              group-hover:-translate-y-4
+              drop-shadow-lg
+              filter hover:drop-shadow-2xl
+            "
+          />
+          {/* Subtle floating animation on hover */}
+          <style jsx>{`
+            @keyframes float {
+              0%, 100% { transform: translateY(0px); }
+              50% { transform: translateY(-12px); }
+            }
+            .group:hover img {
+              animation: float 1.0s ease-in-out infinite;
+            }
+          `}</style>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
             </div>
 
             {/* Cards Section */}

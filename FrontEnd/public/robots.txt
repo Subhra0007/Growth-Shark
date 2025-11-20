@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.growthshark.io/sitemap.xml
+Disallow: /services/automation
+Disallow: /services/community-engagement
+Disallow: /services/email-campaign
+Disallow: /services/feedback
+Disallow: /services/online-engagement
+
+Sitemap: https://growthshark.io/sitemap.xml

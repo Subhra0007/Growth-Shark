@@ -17,7 +17,7 @@ function Services() {
                Partner?
             </h2>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              Your Growthstack team handles essential marketing strategies & execution, <br />
+              Your Growthshark team handles essential marketing strategies & execution, <br />
               and gives you a bloody edge at your competitors, while focusing more on inbound than vague niches.
             </p>
           </div>

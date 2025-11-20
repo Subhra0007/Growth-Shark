@@ -20,7 +20,7 @@ function Services() {
               Perfect <span className="text-[#2ea9ff]">Hunting Partner?</span>
             </h2>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              Your Growthstack team handles essential marketing strategies & execution, <br />
+              Your Growthshark team handles essential marketing strategies & execution, <br />
               and gives you a bloody edge at your competitors, while focusing more on inbound than vague niches.
             </p>
           </div>
