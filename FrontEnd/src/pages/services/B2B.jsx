@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function B2BSEOSection() {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
+      <Helmet>
+        <title>Generate High-Quality B2B Leads with Our SEO Services | GrowthShark</title>
+        <meta name="description" content="Looking to grow your B2B business? GrowthShark helps you generate high-quality leads through proven SEO strategies. Schedule your free consultation now!" />
+      </Helmet>
       <div className=" space-y-14">
         {/* INTRO */}
         <div className="text-center max-w-6xl mx-auto">

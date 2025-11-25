@@ -1,9 +1,14 @@
-import smm4 from '..//../assets/smm4.jpg'
-import smm5 from '..//../assets/smm5.jpg'
+import { Helmet } from "react-helmet-async";
+import smm4 from '../../assets/smm4.jpg'
+import smm5 from '../../assets/smm5.jpg'
 
 const SMM2 = () => {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-20 sm:py-32 min-h-screen">
+      <Helmet>
+        <title>Check Our Social Media Marketing Success (SMM 2) Stories |Growthshark</title>
+        <meta name="description" content="Explore results-driven campaigns that increase followers and engagement. Start your social media success story at GrowthShark." />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Section: Background */}
         <div className="bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg backdrop-blur">

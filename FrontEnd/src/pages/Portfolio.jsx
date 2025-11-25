@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Portfolio1 from "../assets/Portfolio1.jpg";
 import Portfolio2 from "../assets/Portfolio2.jpg";
 import Portfolio3 from "../assets/Portfolio3.jpg";
@@ -8,6 +9,10 @@ import Portfolio5 from "../assets/Portfolio5.jpg";
 export default function Portfolio() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] px-6 py-20 relative overflow-hidden">
+      <Helmet>
+        <title>Explore Successful Campaigns and Case Studies | Growthshark</title>
+        <meta name="description" content="Discover GrowthShark’s mission vision & success stories and learn how we help brands achieve growth with innovative strategies. Contact us Today." />
+      </Helmet>
       {/* Background Glow */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="w-80 h-80 bg-sky-500 rounded-full blur-3xl absolute top-20 left-10"></div>

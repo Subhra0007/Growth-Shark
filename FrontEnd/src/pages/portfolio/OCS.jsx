@@ -1,7 +1,13 @@
 
+import { Helmet } from "react-helmet-async";
+
 const OCS = () => {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-20 sm:py-30">
+      <Helmet>
+        <title>Discover Our Top Performing Online Campaigns | Growthshark</title>
+        <meta name="description" content="Check out our top-performing campaigns and learn how we grow brands. Start achieving online success with GrowthShark." />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Section: Background */}
         <section className="space-y-4 bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 rounded-xl p-6  hover:scale-105 transition shadow-lg backdrop-blur ">

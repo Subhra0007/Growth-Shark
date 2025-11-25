@@ -1,10 +1,15 @@
-import pms1 from '..//../assets/pms1.jpg'
-import pms2 from '..//../assets/pms2.jpg'
-import pms3 from '..//../assets/pms3.jpg'
-import pms4 from '..//../assets/pms4.jpg'
+import { Helmet } from "react-helmet-async";
+import pms1 from '../../assets/pms1.jpg'
+import pms2 from '../../assets/pms2.jpg'
+import pms3 from '../../assets/pms3.jpg'
+import pms4 from '../../assets/pms4.jpg'
 export default function PMS() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30">
+      <Helmet>
+        <title>Explore Performance Marketing Success Stories | Growthshark</title>
+        <meta name="description" content="See how we deliver measurable results and maximize marketing efficiency. Partner with us for your next campaign at GrowthShark." />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-12">
 
         <section className="space-y-4 bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg backdrop-blur">

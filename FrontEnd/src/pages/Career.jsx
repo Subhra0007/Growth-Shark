@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import career from "../assets/career.png";
 
 export default function Career() {
@@ -74,6 +75,10 @@ export default function Career() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white">
+      <Helmet>
+        <title>Explore Exciting Career Opportunities & Grow Your Skills at GrowthShark</title>
+        <meta name="description" content="Discover exciting roles where your talent can shine. Join GrowthShark and take the next step toward a successful career. Apply now." />
+      </Helmet>
       <div className="px-6">
         {/* Hero Section */}
         <section className="max-w-6xl mx-auto pt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">

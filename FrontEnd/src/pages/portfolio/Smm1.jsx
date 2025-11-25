@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import smm1 from '../../assets/smm1.jpg'
 import smm2 from '../../assets/smm2.jpg'
 import smm3 from '../../assets/smm3.jpg'
 export default function SMM1() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 pt-30 sm:py-30">
+      <Helmet>
+        <title>Check Our Social Media Marketing Success (SMM 1) Stories |Growthshark</title>
+        <meta name="description" content="Discover our creative strategies that drive engagement and growth. Transform your social presence today at GrowthShark." />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Section: Background */}
         <div className="bg-gradient-to-br from-[#0b223f]/70 to-[#06263f]/50 border border-white/10 rounded-xl p-6  hover:scale-105 transition shadow-lg backdrop-blur">

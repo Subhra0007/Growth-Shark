@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Mail, Phone } from "lucide-react";
 
 function ContactSection() {
@@ -53,6 +54,10 @@ async function handleSubmit(e) {
 
   return (
     <section className="text-white pt-30 bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] relative overflow-hidden">
+      <Helmet>
+        <title>Get in Touch & Take Your Business to the Next Level at GrowthShark</title>
+        <meta name="description" content="Contact our expert team for tailored digital marketing solutions. Reach out now and start growing your brand with GrowthShark." />
+      </Helmet>
       {/* Background Glow */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-96 h-96 bg-sky-500 rounded-full blur-3xl absolute -top-20 -left-20"></div>

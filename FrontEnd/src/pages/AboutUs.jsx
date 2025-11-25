@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { Helmet } from "react-helmet-async";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -56,6 +57,10 @@ export default function AboutSection() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white relative overflow-hidden  px-6 ">
+      <Helmet>
+        <title>Learn How We Drive Digital Growth and Make an Impact | Growthshark</title>
+        <meta name="description" content="Explore exciting career opportunities at GrowthShark and join a team of innovators and digital marketing enthusiasts. Apply now to elevate your career with us." />
+      </Helmet>
       <div className="max-w-6xl mx-auto pb-16">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">

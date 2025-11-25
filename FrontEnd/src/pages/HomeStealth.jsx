@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "../components/StealthComponents/Hero";
 import AboutSection from "../components/StealthComponents/AboutSection";
 import Why from "../components/StealthComponents/Why";
@@ -12,7 +13,10 @@ import Testimonials from '../components/StealthComponents/Testimonials'
 export default function HomeStealth() {
     return (
         <div className="bg-gradient-to-b from-[#0b223f] to-[#06263f] text-white">
-          
+            <Helmet>
+                          <title>Grow Your Business Online with a Leading Marketing Agency | Growthshark</title>
+                          <meta name="description" content="Looking to grow your business online? GrowthShark provides expert marketing services that boost engagement, generate leads, and increase sales. Get your free consultation today!" />
+                      </Helmet>
             <Hero />
             <AboutSection />
             <Why />
