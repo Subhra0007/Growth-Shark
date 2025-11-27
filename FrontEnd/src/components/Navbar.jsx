@@ -59,7 +59,7 @@ export default function Navbar({ toggleMode, isStealth }) {
     { name: "Facebook Marketing", link: "/services/facebook-marketing" },
     { name: "Instagram Marketing", link: "/services/insta-marketing" },
     { name: "Social Listening & Monitoring", link: "/services/social-listening" },
-    { name: "Content Creation & Scheduling", link: "/services/content-creation" },
+    { name: "Content Creation & Scheduling", link: "/services/content-creation-services" },
   ];
 
   const services = [...mainServices, ...socialMediaServices];

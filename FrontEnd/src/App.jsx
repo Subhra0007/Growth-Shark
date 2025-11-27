@@ -89,7 +89,7 @@ function AppContent() {
         <Route path="/services/blog-writing-service" element={<Blog />} />
         {/* <Route path="/services/community-engagement" element={<CommunityEngagement />} /> */}
         <Route path="/services/community-management" element={<CommunityManagement />} />
-        <Route path="/services/content-creation" element={<ContentCreation />} />
+        <Route path="/services/content-creation-services" element={<ContentCreation />} />
         <Route path="/services/copywriting-services" element={<CopyWriting />} />
         <Route path="/services/ecommerce-seo-services" element={<Ecommerce />} />
         {/* <Route path="/services/email-campaign" element={<EmailCampaigns />} /> */}
