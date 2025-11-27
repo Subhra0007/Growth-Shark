@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const API =
   import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
@@ -11,6 +12,19 @@ const fixImageUrl = (url) => {
     "wordpress-1281832-4641891.cloudwaysapps.com",
     "proriterz.com"
   );
+};
+
+// Convert WordPress HTML excerpts to plain text for meta tags
+const stripHtmlTags = (html) => {
+  if (!html) return "";
+  const withoutTags = html.replace(/<[^>]*>/g, " ");
+  const decoded = withoutTags
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number(dec)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) =>
+      String.fromCharCode(parseInt(hex, 16))
+    )
+    .replace(/&nbsp;/gi, " ");
+  return decoded.replace(/\s+/g, " ").trim();
 };
 
 // Helper to make links open in a new tab
@@ -51,6 +65,59 @@ export default function BlogPost() {
     fetchPost();
   }, [slug]);
 
+  const getTitle = () => {
+    switch (slug) {
+      case "what-is-white-label-content":
+        return "Get information on what is white label content | Growthshark";
+      case "research-tips-for-writing-content-that-ranks":
+        return "Learn to Write Content That Ranks on Google | Growthshark";
+      case "how-to-create-successful-data-driven-content":
+        return "Know about how to create successful data driven content | Growthshark";
+      case "website-content-audit":
+        return "Identify Website Content Issues | GrowthShark";
+      case "casual-vs-conversational":
+        return "Understand Casual vs Conversational Writing | Growthshark";
+      case "content-site-case-study":
+        return "Get a Real Content Case Study | GrowthShark";
+      case "why-should-content-repurposing-be-a-crucial-part-of-your-content-marketing-strategy":
+        return "Find Smart Content Repurposing Tips | GrowthShark";
+      case "what-is-the-role-of-content-in-digital-marketing":
+        return "Identify what is the role of content in Digital Marketing | Growthshark";
+      case "how-to-deploy-content-effectively-to-maximize-roi-curated-tips-for-businesses-in-2021-from-the-man-himself":
+        return "Know how to Deploy Content Effectively for better reach | Growthshark";
+      default:
+        return `${stripHtmlTags(post?.title?.rendered) || "GrowthShark Blog"} | GrowthShark`;
+    }
+  };
+
+  const getDescription = () => {
+    switch (slug) {
+      case "what-is-white-label-content":
+        return "Learn what white label content is and how it helps you scale faster. Discover key benefits and start growing smarter today.";
+      case "research-tips-for-writing-content-that-ranks":
+        return "Find smart research methods to write high-ranking content. GrowthShark shares practical ways to analyze keywords and competitors.";
+      case "how-to-create-successful-data-driven-content":
+        return "Discover how GrowthShark uses data and insights to create high-performing content. Learn simple techniques to boost your content results today.";
+      case "website-content-audit":
+        return "Learn how GrowthShark helps you audit your website content, fix gaps, and improve SEO performance. Start optimizing your site more effectively today.";
+      case "casual-vs-conversational":
+        return "Discover how GrowthShark explains tone differences and helps you choose the best style for engagement. Learn how to improve your writing today.";
+      case "content-site-case-study":
+        return "See how GrowthShark builds successful content sites with real strategies and insights. Learn what works and apply proven methods to your content today.";
+      case "why-should-content-repurposing-be-a-crucial-part-of-your-content-marketing-strategy":
+        return "Learn why repurposing matters and how GrowthShark helps you expand reach and boost ROI. Discover simple ways to turn one asset into many.";
+      case "what-is-the-role-of-content-in-digital-marketing":
+        return "Discover how GrowthShark uses content to drive visibility, traffic, and conversions. Understand why content is essential to your marketing success today.";
+      case "how-to-deploy-content-effectively-to-maximize-roi-curated-tips-for-businesses-in-2021-from-the-man-himself":
+        return "Explore GrowthShark's proven ways to deploy content for better reach and ROI. Learn valuable tips and start improving your content performance today.";
+      default:
+        return (
+          stripHtmlTags(post?.excerpt?.rendered) ||
+          "Read the latest blogs on SEO, marketing, and business growth from GrowthShark."
+        );
+    }
+  };
+
   if (loading)
     return <p className="text-center p-4 text-white">Loading post...</p>;
   if (error)
@@ -69,6 +136,12 @@ export default function BlogPost() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] min-h-screen py-10">
+      <Helmet>
+        <title>
+          {getTitle()}
+        </title>
+        <meta name="description" content={getDescription()} />
+      </Helmet>
       <style>
         {`
           .prose p {

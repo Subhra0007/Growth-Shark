@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const API = import.meta.env.VITE_PRORITERZ_API || "https://proriterz.com/wp-json/wp/v2";
 
@@ -30,6 +31,13 @@ export default function BlogList() {
 
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f]">
+      <Helmet>
+        <title>Helpful Tips for Better Marketing and Faster Growth | Growthshark</title>
+        <meta
+          name="description"
+          content="Read the latest blogs on SEO, marketing, and business growth from GrowthShark. Learn practical tips to grow your brand. Start reading now."
+        />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-6 py-30">
       {/* <h1 className="text-3xl font-bold mb-8">Blogs</h1> */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
