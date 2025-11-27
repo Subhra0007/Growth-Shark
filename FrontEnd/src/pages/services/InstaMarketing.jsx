@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 function InstagramMarketingSection() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
+      <Helmet>
+        <title>Increase Followers & Engagement on Instagram | Growthshark</title>
+        <meta name="description" content="Build your brand and connect with Millennial & Gen-Z audiences with Growthshark. Launch your Instagram marketing strategy now!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-20">
 
         {/* Header */}

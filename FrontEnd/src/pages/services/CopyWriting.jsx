@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 export default function CopywritingSection() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
     <section className="max-w-6xl mx-auto ">
+      <Helmet>
+        <title>Grow your brand & reach with easy, effective content creation | Growthshark</title>
+        <meta name="description" content="Transform your content with professional copywriting services with Growthshark. Drive engagement & sales and start growing your brand now!" />
+      </Helmet>
 
       {/* Heading */}
       <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center">

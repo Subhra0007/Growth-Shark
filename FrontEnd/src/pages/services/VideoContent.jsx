@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 export default function VideoContent2025() {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-20 sm:py-28">
+      <Helmet>
+        <title>Create Engaging Videos with our Professional Video Editing | Growthshark</title>
+        <meta name="description" content="Produce polished, captivating videos with our expert video editing services at Growthshark. Contact us Now!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-14">
       {/* Header */}
       <header className="mb-16 text-center">

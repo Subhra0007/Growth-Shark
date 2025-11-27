@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 export default function SocialListening2025() {
   return (
     <div className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
+      <Helmet>
+        <title>Monitor Your Brand Online to Get Social Listening Insights | Growthshark</title>
+        <meta name="description" content="Understand your audience and improve campaigns with our social listening services at Growthshark. Start gaining insights today!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-20">
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-extrabold mb-8 text-center">

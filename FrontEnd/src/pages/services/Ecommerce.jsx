@@ -1,8 +1,14 @@
 import { FaSearch, FaTags, FaPenFancy, FaLink, FaCheckCircle } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 const EcommerceSEO = () => {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
+      <Helmet>
+        <title>Boost Your Sales with Ecommerce SEO Services | Growthshark</title>
+        <meta name="description" content="Improve your store’s search rankings and drive organic traffic with our expert ecommerce SEO at Growthshark. Contact us Now!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-extrabold mb-8 text-center">

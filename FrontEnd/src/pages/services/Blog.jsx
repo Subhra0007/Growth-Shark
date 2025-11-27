@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogWritingSection() {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-30">
+      <Helmet>
+        <title>Boost Your Online Presence with Expert Blog Writing Services | Growthshark</title>
+        <meta name="description" content="Engage your audience with high-quality, SEO-friendly blogs that attract readers and boost traffic. Grow your brand, build trust, and get results today with GrowthShark." />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-14">
 
         {/* Top Heading */}

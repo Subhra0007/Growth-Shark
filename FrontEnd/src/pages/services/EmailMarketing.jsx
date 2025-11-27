@@ -1,8 +1,14 @@
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 const EmailMarketing2025 = () => {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white py-30 px-6 ">
+      <Helmet>
+        <title>Launch Email Marketing Campaigns to Engage & Conversion | Growthshark</title>
+        <meta name="description" content="Reach your audience with targeted email marketing that converts. Start your campaigns today with Growthshark to increase leads and revenue!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto ">
 
         {/* Header */}

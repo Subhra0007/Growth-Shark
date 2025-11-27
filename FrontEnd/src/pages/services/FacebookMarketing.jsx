@@ -1,8 +1,14 @@
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 const FacebookMarketing2025 = () => {
   return (
     <section className="bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] text-white px-6 py-30 sm:py-28">
+      <Helmet>
+        <title>Grow Your Brand with Facebook Marketing – Get Started Today</title>
+        <meta name="description" content="Reach your ideal audience and boost engagement with expert Facebook marketing. Start growing your brand now!" />
+      </Helmet>
       <div className="max-w-6xl mx-auto space-y-20" >
 
         {/* Section Title */}
