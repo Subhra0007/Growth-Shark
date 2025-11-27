@@ -236,7 +236,7 @@ const handleToggleMode = () => {
                           e.stopPropagation();
                           setIsSocialMediaSubMenuOpen(!isSocialMediaSubMenuOpen);
                         }}
-                        className="flex items-center justify-between w-full px-4 py-3 text-black group text-base font-bold cursor-pointer"
+                        className="flex items-center justify-between w-full px-4 py-3 text-black group text-base font-semibold cursor-pointer"
                         onMouseEnter={() => setHovered("social-media-marketing")}
                         onMouseLeave={() => setHovered(null)}
                       >
@@ -248,7 +248,7 @@ const handleToggleMode = () => {
                           size={12} 
                         />
                       </button>
-                      <div className={` transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className={`pl-3 transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                         {socialMediaServices.map((service) => (
                           <Link
                             key={service.name}
@@ -256,7 +256,7 @@ const handleToggleMode = () => {
                             onClick={() => setIsServicesOpen(false)}
                             onMouseEnter={() => setHovered(service.link)}
                             onMouseLeave={() => setHovered(null)}
-                            className="relative block px-4 py-3 transition text-black group text-base"
+                            className="relative block px-4 py-3 transition text-black group text-sm"
                           >
                             {service.name}
                             <span
@@ -356,7 +356,7 @@ const handleToggleMode = () => {
                       {/* Social Media Marketing Services Submenu */}
                       <div className="py-2">
                         <button 
-                          className="flex items-center justify-between w-full font-semibold py-2 text-base"
+                          className="flex items-center justify-between w-full  py-2 text-base"
                           onClick={(e) => {
                             e.stopPropagation();
                             console.log('Social Media Submenu Clicked. Current state:', isSocialMediaSubMenuOpen);
@@ -372,12 +372,12 @@ const handleToggleMode = () => {
                             size={12} 
                           />
                         </button>
-                        <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className={` pl-3 transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                           {socialMediaServices.map((service) => (
                             <Link
                               key={service.name}
                               to={service.link}
-                              className="block py-2 text-base hover:text-white"
+                              className="block py-2 text-sm hover:text-white"
                               onClick={() => {
                                 setIsSocialMediaSubMenuOpen(false);
                                 setIsMobileServicesOpen(false);
