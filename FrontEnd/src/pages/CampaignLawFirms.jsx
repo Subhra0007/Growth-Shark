@@ -27,27 +27,27 @@ const evidencePoints = [
 ];
 
 const whyUsPoints = [
-      { 
-        icon: <FaShieldAlt />, 
-        title: "Build a Strong Brand", 
-        desc: "We ensure your firm shows up with authority when people search for legal help." 
-      },
-      { 
-        icon: <FaChartLine />, 
-        title: "High-Intent Rankings", 
-        desc: "Rank for keywords that drive retainers, not just casual traffic." 
-      },
-      { 
-        icon: <FaBullseye />, 
-        title: "Targeted Acquisition", 
-        desc: "Run ads that reach the right audience—people who need a lawyer now." 
-      },
-      { 
-        icon: <FaUserCheck />, 
-        title: "Client Generator", 
-        desc: "Turn your website into a machine that books consultations automatically." 
-      },
-    ];
+      { 
+        icon: <FaShieldAlt />, 
+        title: "Build a Strong Brand", 
+        desc: "We ensure your firm shows up with authority when people search for legal help." 
+      },
+      { 
+        icon: <FaChartLine />, 
+        title: "High-Intent Rankings", 
+        desc: "Rank for keywords that drive retainers, not just casual traffic." 
+      },
+      { 
+        icon: <FaBullseye />, 
+        title: "Targeted Acquisition", 
+        desc: "Run ads that reach the right audience—people who need a lawyer now." 
+      },
+      { 
+        icon: <FaUserCheck />, 
+        title: "Client Generator", 
+        desc: "Turn your website into a machine that books consultations automatically." 
+      },
+    ];
 
 export default function CampaignLawFirms() {
   // State for the interactive company name input
@@ -59,13 +59,13 @@ export default function CampaignLawFirms() {
 
   return (
     <div className="bg-black text-white min-h-screen font-sans selection:bg-lime-400 selection:text-black">
-      <Helmet>
+{/*       <Helmet>
         <title>Law Firm Growth — Campaign | GrowthShark</title>
         <meta
           name="description"
           content="Get the visibility and paying clients your practice truly deserves. No fluff. Just clarity, direction, and real solutions."
         />
-      </Helmet>
+      </Helmet> */}
 
       <div className="relative overflow-hidden">
         {/* Global Background Ambience */}
@@ -93,7 +93,7 @@ export default function CampaignLawFirms() {
               </h1>
               
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                How many weeks have passed without a strong client inquiry? How often do you see competitors winning the cases you could handle better? And how many times have you thought, *“I just need the right clients to find me.”*
+                How many weeks have passed without a strong client inquiry? How often do you see competitors winning the cases you could handle better? And how many times have you thought, “I just need the right clients to find me.”
               </p>
               
               <p className="text-gray-400 italic">
@@ -116,20 +116,20 @@ export default function CampaignLawFirms() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
               <button 
                 onClick={scrollToCTA}
-                className="px-8 py-4 rounded-full bg-lime-400 text-black font-bold text-lg shadow-[0_0_30px_rgba(132,204,22,0.4)] hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1"
+                className="px-8 py-4 rounded-full bg-lime-400 text-black font-bold text-lg shadow-[0_0_30px_rgba(132,204,22,0.4)] hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1 cursor-pointer"
               >
                 Book Consultation
               </button>
-              <button 
+{/*               <button 
                 onClick={scrollToCTA}
                 className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 hover:border-lime-300/50 hover:text-lime-300 transition"
               >
                 See The Evidence
-              </button>
+              </button> */}
             </div>
           </section>
 
-          {/* --- EVIDENCE / PAIN POINTS SECTION - No content change needed here, data is correct --- */}
+          {/* --- EVIDENCE / PAIN POINTS SECTION - Kept commented out for consistency --- */}
 {/*           <section className="mt-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">The Evidence Against Your Current Strategy</h2>
@@ -158,80 +158,49 @@ export default function CampaignLawFirms() {
             </div>
           </section> */}
 
-          {/* --- SOLUTION / METRICS SECTION (Updated content) --- */}
-          <section className="mt-24 bg-gradient-to-b from-[#0e121e] to-black border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-            {/* Background Glow */}
+          {/* --- SOLUTION / METRICS SECTION (MODIFIED to match image) --- */}
+          <section className="mt-24 bg-black border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden max-w-4xl mx-auto">
+            {/* Background Glow - Removed for a clean, dark look like the image */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-lime-400/5 blur-[100px] pointer-events-none" />
 
-            <div className="relative grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
               
-              {/* Left Content */}
-              <div className="space-y-6">
-                <div className="inline-block px-3 py-1 rounded bg-lime-400/10 text-lime-400 text-xs font-bold tracking-widest uppercase">
+              {/* Content Section (Now Full Width) */}
+              <div className="space-y-4">
+                {/* Badge: THE GROWTHSHARK ADVANTAGE */}
+                <div className="inline-block text-lime-400 text-xs font-bold tracking-widest uppercase bg-transparent">
                   The GrowthShark Advantage
                 </div>
-                <h3 className="text-3xl md:text-5xl font-bold">
-                  Imagine This <span className="text-lime-400">Instead:</span>
+                
+                {/* Title: Imagine This Instead: */}
+                <h3 className="text-5xl md:text-6xl font-bold leading-tight">
+                  Imagine This <br className="hidden md:block"/> <span className="text-lime-400">Instead:</span>
                 </h3>
-                <p className="text-lg text-gray-300">
-                  That is the power of smart digital marketing designed specifically for lawyers.
-                </p>
-
-                <ul className="space-y-4 mt-4">
-                  {/* Directly using the bullet points from the document. The array was already present in the original code, but I'll make sure it matches the document exactly. */}
+                
+                {/* Checklist points, styled to look like the image */}
+                <div className="space-y-4 pt-6 pb-8">
+                  
                   {[
                     "Your firm shows up when people search for legal help",
                     "Clients read about your expertise and trust you before calling",
                     "Your calendar fills with booked consultations, not cold outreach",
                     "Competitors stop eating into your market share"
                   ].map((point, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-lime-400 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-black font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
+                    <div key={i} className="flex items-center gap-4 text-xl md:text-2xl text-white font-normal">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-transparent flex items-center justify-center text-lime-400">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
                       <span className="text-gray-200">{point}</span>
-                    </li>
+                    </div>
                   ))}
-                </ul>
-              </div>
-
-              {/* Right Dashboard UI - Kept as is */}
-              <div className="relative">
-                <div className="relative bg-[#000] border border-white/10 rounded-2xl p-6 shadow-2xl">
-                  <div className="flex items-center justify-between mb-8">
-                    <div>
-                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Monthly Case Value</p>
-                      <div className="flex items-end gap-3">
-                        <span className="text-4xl font-bold text-white">₹142,500</span>
-                        <span className="text-sm text-lime-400 font-bold bg-lime-400/10 px-2 py-1 rounded">+34%</span>
-                      </div>
-                    </div>
-                    <div className="text-right hidden sm:block">
-                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Inquiries</p>
-                      <span className="text-2xl font-bold text-white">248</span>
-                    </div>
-                  </div>
-
-                  {/* Progress Bars */}
-                  <div className="space-y-6">
-                    <ProgressBar label="Your Firm (GrowthShark)" value={85} color="bg-lime-400" />
-                    <ProgressBar label="Nearest Competitor" value={45} color="bg-[#3bb2ff]" />
-                    <ProgressBar label="Market Average" value={20} color="bg-gray-600" />
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-center text-sm">
-                    <div className="flex items-center gap-2">
-                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                       <span className="text-gray-300">Live Case Tracking</span>
-                    </div>
-                    <span className="text-gray-500">Data Source: Client CRM</span>
-                  </div>
                 </div>
-                
-                {/* Decorative Elements behind card */}
-                <div className="absolute -z-10 -bottom-5 -right-5 w-full h-full border border-white/5 rounded-2xl bg-white/5 backdrop-blur-sm"></div>
+              
+                {/* Subheading/paragraph at the bottom */}
+                <p className="text-xl text-white pt-2"> 
+                  That is the power of smart digital marketing designed specifically for lawyers.
+                </p>
               </div>
             </div>
           </section>
@@ -244,20 +213,20 @@ export default function CampaignLawFirms() {
             </p>
             
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {whyUsPoints.map((item, index) => (
-    <div
-      key={index}
-      className="bg-white/5 border border-white/10 rounded-xl p-6 text-left hover:bg-white/[0.07] transition duration-300"
-    >
-      {/* UPDATED: Displays the icon instead of the bullet point */}
-      <div className="text-lime-400 text-3xl mb-4">
-        {item.icon}
-      </div>
-      
-      <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-      <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
-    </div>
-  ))}
+  {whyUsPoints.map((item, index) => (
+    <div
+      key={index}
+      className="bg-white/5 border border-white/10 rounded-xl p-6 text-left hover:bg-white/[0.07] transition duration-300"
+    >
+      {/* Displays the icon */}
+      <div className="text-lime-400 text-3xl mb-4">
+        {item.icon}
+      </div>
+      
+      <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+      <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+    </div>
+  ))}
 </div>
           </section>
 
@@ -282,7 +251,7 @@ export default function CampaignLawFirms() {
                 No fluff. Just clarity, direction, and real solutions.
               </p>
 
-              {/* CTA Button - Using a standard link style instead of the interactive input/h2 structure */}
+              {/* CTA Button */}
               <a
                 href="https://calendly.com/proriterz101/30min"
                 target="_blank"
@@ -302,24 +271,6 @@ export default function CampaignLawFirms() {
           </section>
 
         </main>
-      </div>
-    </div>
-  );
-}
-// --- Helper Components ---
-
-function ProgressBar({ label, value, color }) {
-  return (
-    <div>
-      <div className="flex justify-between text-xs uppercase tracking-wider text-gray-400 mb-2">
-        <span>{label}</span>
-        <span className="text-white font-semibold">{value}%</span>
-      </div>
-      <div className="w-full h-3 rounded-full bg-gray-800 overflow-hidden">
-        <div 
-          className={`h-full rounded-full ${color} shadow-[0_0_10px_currentColor] transition-all duration-1000 ease-out`} 
-          style={{ width: `${value}%` }} 
-        />
       </div>
     </div>
   );

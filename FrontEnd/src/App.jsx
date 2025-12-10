@@ -71,7 +71,7 @@ function AppContent() {
     <>
       <CanonicalHelmet />
       <ScrollToTop />
-      {!isCampaignPage && <Navbar toggleMode={toggleMode} isStealth={isStealth} />}
+      <Navbar toggleMode={toggleMode} isStealth={isStealth} />
       <Routes>
         <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
         <Route path="/attack" element={<HomeAttack />} />
@@ -108,7 +108,7 @@ function AppContent() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
-      {!isCampaignPage && <Footer />}
+      <Footer />
     </>
   );
 }
