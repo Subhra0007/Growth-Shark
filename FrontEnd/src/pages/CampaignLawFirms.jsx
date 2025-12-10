@@ -74,7 +74,7 @@ export default function CampaignLawFirms() {
         <main className="relative max-w-6xl mx-auto px-6 pb-20 pt-16 md:pt-24">
           
           {/* --- HERO SECTION (Updated content) --- */}
-          <section className="text-center space-y-8 mb-24">
+          <section className="text-center space-y-8 mb-24 mt-10">
             {/* Logo / Badge - Kept commented out as in original */}
             {/* <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur hover:bg-white/10 transition cursor-default">
                <img src={logo} alt="GrowthShark" className="h-6 w-auto" /> 
@@ -231,7 +231,7 @@ export default function CampaignLawFirms() {
           </section>
 
           {/* --- FINAL CTA SECTION (Updated content and ID for scrolling) --- */}
-          <section id="hunt-section" className="relative bg-black text-white px-6 py-16 overflow-hidden  max-w-6xl mx-auto">
+          <section id="hunt-section" className="relative bg-black text-white px-6 py-16 overflow-hidden  max-w-6xl mx-auto pt-10">
             {/* Glow */}
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
               <div className="w-[300px] h-[300px] bg-sky-400/20 rounded-full blur-3xl"></div>
@@ -239,7 +239,7 @@ export default function CampaignLawFirms() {
 
             <div className="relative z-10 max-w-6xl mx-auto text-center">
               
-              <p className="text-xl sm:text-2xl font-bold text-white mb-6">
+              <p className="text-xl sm:text-2xl font-bold text-white mb-6 pt-10">
                 If you have been thinking, <span className="italic text-lime-400">“I should be getting more cases than this”</span>, then this is your moment.
               </p>
 
