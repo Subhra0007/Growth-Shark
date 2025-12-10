@@ -14,6 +14,7 @@ import Career from "./pages/Career";
 import Portfolio from "./pages/Portfolio";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
+import CampaignLawFirms from "./pages/CampaignLawFirms";
 
 // Portfolio Case Pages
 import Smm1 from "./pages/portfolio/Smm1";
@@ -55,6 +56,8 @@ function CanonicalHelmet() {
 
 function AppContent() {
   const [isStealth, setIsStealth] = useState(false);
+  const location = useLocation();
+  const isCampaignPage = location.pathname.startsWith("/lawers");
 
   const toggleMode = () => {
     console.log("Toggling mode, isStealth before:", isStealth);
@@ -68,7 +71,7 @@ function AppContent() {
     <>
       <CanonicalHelmet />
       <ScrollToTop />
-      <Navbar toggleMode={toggleMode} isStealth={isStealth} />
+      {!isCampaignPage && <Navbar toggleMode={toggleMode} isStealth={isStealth} />}
       <Routes>
         <Route path="/" element={isStealth ? <HomeStealth /> : <HomeAttack />} />
         <Route path="/attack" element={<HomeAttack />} />
@@ -77,6 +80,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/lawers" element={<CampaignLawFirms />} />
         {/* Portfolio Cases */}
         <Route path="/portfolio/smm1" element={<Smm1 />} />
         <Route path="/portfolio/smm2" element={<Smm2 />} />
@@ -104,7 +108,7 @@ function AppContent() {
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
-      <Footer />
+      {!isCampaignPage && <Footer />}
     </>
   );
 }
