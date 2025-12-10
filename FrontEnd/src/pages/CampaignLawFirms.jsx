@@ -150,8 +150,12 @@ export default function CampaignLawFirms() {
                 
                 {/* Title: Imagine This Instead: - Red Circle: Center align and in a single line, don't use <br> before "instead" */}
                 <h3 className="text-5xl md:text-6xl font-bold leading-tight flex flex-col justify-center items-center">
-                  <span className="flex">
+                  <span className=" hidden lg:block">
                     Imagine This&nbsp;
+                    <span className="text-[#3bb2ff]">Instead:</span> {/* Yellow Circle: The "Instead" should be in blue */}
+                  </span>
+                   <span className=" lg:hidden block">
+                    Imagine This&nbsp;<br/> 
                     <span className="text-[#3bb2ff]">Instead:</span> {/* Yellow Circle: The "Instead" should be in blue */}
                   </span>
                 </h3>
