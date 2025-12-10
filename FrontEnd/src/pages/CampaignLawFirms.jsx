@@ -129,56 +129,35 @@ export default function CampaignLawFirms() {
             </div>
           </section>
 
-          {/* --- EVIDENCE / PAIN POINTS SECTION - Kept commented out for consistency --- */}
-{/*           <section className="mt-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">The Evidence Against Your Current Strategy</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Most law firms are guilty of wasting budget on invisible campaigns. Is your firm suffering from these symptoms?
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {evidencePoints.map((item, index) => (
-                <div
-                  key={index}
-                  className="group bg-[#0b0f1a] border border-white/10 rounded-2xl p-8 space-y-4 hover:border-[#3bb2ff]/50 transition duration-300 relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#3bb2ff]/10 blur-[40px] rounded-full group-hover:bg-[#3bb2ff]/20 transition" />
-                  
-                  <div className="inline-flex items-center justify-center h-14 w-14 rounded-xl bg-white/5 text-[#3bb2ff] text-2xl group-hover:scale-110 transition">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section> */}
-
           {/* --- SOLUTION / METRICS SECTION (MODIFIED to match image) --- */}
           <section className="mt-24 bg-black border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden max-w-4xl mx-auto">
-            {/* Background Glow - Removed for a clean, dark look like the image */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-lime-400/5 blur-[100px] pointer-events-none" />
+            {/* Blue Gradient BG for the div as requested */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.15),transparent_60%)] pointer-events-none" />
+            
+            {/* Center Glow for this section */}
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+                <div className="w-72 sm:w-96 h-72 sm:h-96 bg-[#2ea9ff]/20 rounded-full blur-3xl"></div>
+            </div>
 
-            <div className="relative">
+            <div className="relative z-10">
               
-              {/* Content Section (Now Full Width) */}
-              <div className="space-y-4">
-                {/* Badge: THE GROWTHSHARK ADVANTAGE */}
-                <div className="inline-block text-lime-400 text-xs font-bold tracking-widest uppercase bg-transparent">
+              {/* Content Section */}
+              <div className="space-y-4 text-center"> {/* Added text-center here */}
+                {/* Badge: THE GROWTHSHARK ADVANTAGE - Blue Circle: Center align */}
+                <div className="inline-block text-lime-400 text-xs font-bold tracking-widest uppercase bg-transparent w-full"> 
                   The GrowthShark Advantage
                 </div>
                 
-                {/* Title: Imagine This Instead: */}
-                <h3 className="text-5xl md:text-6xl font-bold leading-tight">
-                  Imagine This <br className="hidden md:block"/> <span className="text-lime-400">Instead:</span>
+                {/* Title: Imagine This Instead: - Red Circle: Center align and in a single line, don't use <br> before "instead" */}
+                <h3 className="text-5xl md:text-6xl font-bold leading-tight flex flex-col justify-center items-center">
+                  <span className="flex">
+                    Imagine This&nbsp;
+                    <span className="text-[#3bb2ff]">Instead:</span> {/* Yellow Circle: The "Instead" should be in blue */}
+                  </span>
                 </h3>
                 
-                {/* Checklist points, styled to look like the image */}
-                <div className="space-y-4 pt-6 pb-8">
+                {/* Checklist points - Reset to left alignment for the list */}
+                <div className="space-y-4 pt-6 pb-8 text-left inline-block"> 
                   
                   {[
                     "Your firm shows up when people search for legal help",
@@ -186,8 +165,8 @@ export default function CampaignLawFirms() {
                     "Your calendar fills with booked consultations, not cold outreach",
                     "Competitors stop eating into your market share"
                   ].map((point, i) => (
-                    <div key={i} className="flex items-center gap-4 text-xl md:text-2xl text-white font-normal">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-transparent flex items-center justify-center text-lime-400">
+                    <div key={i} className="flex items-start gap-4 text-xl md:text-2xl text-white font-normal">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-transparent flex items-center justify-center text-lime-400 mt-1">
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                         </svg>
@@ -198,7 +177,7 @@ export default function CampaignLawFirms() {
                 </div>
               
                 {/* Subheading/paragraph at the bottom */}
-                <p className="text-xl text-white pt-2"> 
+                <p className="text-xl text-white pt-2 text-center"> 
                   That is the power of smart digital marketing designed specifically for lawyers.
                 </p>
               </div>
