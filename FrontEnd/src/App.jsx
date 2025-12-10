@@ -80,7 +80,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/lawers" element={<CampaignLawFirms />} />
+        <Route path="/lawyer" element={<CampaignLawFirms />} />
         {/* Portfolio Cases */}
         <Route path="/portfolio/smm1" element={<Smm1 />} />
         <Route path="/portfolio/smm2" element={<Smm2 />} />

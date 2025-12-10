@@ -74,7 +74,7 @@ export default function CampaignLawFirms() {
         <main className="relative max-w-6xl mx-auto px-6 pb-20 pt-16 md:pt-24">
           
           {/* --- HERO SECTION (Updated content) --- */}
-          <section className="text-center space-y-8 mb-24 mt-10">
+          <section className="text-center space-y-8 mb-24 lg:mt-10 mt-20">
             {/* Logo / Badge - Kept commented out as in original */}
             {/* <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur hover:bg-white/10 transition cursor-default">
                <img src={logo} alt="GrowthShark" className="h-6 w-auto" /> 
@@ -235,7 +235,7 @@ export default function CampaignLawFirms() {
                 href="https://calendly.com/proriterz101/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-lime-400 shadow-lg shadow-black/50 hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1 text-black font-bold px-10 py-4 rounded-full text-lg duration-300"
+                className="inline-flex items-center gap-2 bg-lime-400 shadow-lg shadow-black/50 hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1 text-black lg:font-bold px-10 py-4 rounded-full text-lg duration-300 font-semibold"
               >
                 
                   
