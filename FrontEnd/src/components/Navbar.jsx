@@ -85,7 +85,20 @@ const handleToggleMode = () => {
   console.log("Current Path:", location.pathname);
   console.log("Current isStealth:", isStealth);
 
-  // Toggle the mode
+  // Special handling for /lawyer page
+  if (location.pathname === "/lawyer") {
+    // Navigate directly to the appropriate home page variant
+    if (isStealth) {
+      // Currently in stealth mode, toggle to attack mode
+      navigate("/");
+    } else {
+      // Currently in attack mode, toggle to stealth mode
+      navigate("/");
+    }
+    return;
+  }
+
+  // Toggle the mode for other pages
   toggleMode();
 
   // Scroll to top
