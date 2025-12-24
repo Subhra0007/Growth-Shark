@@ -1,49 +1,50 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import video from "..//../public/lawyer.mp4"
 import { FaPlay, FaPause } from "react-icons/fa"; // Imported Play/Pause Icons
-import { FaBullseye, FaShieldAlt ,FaChartLine, FaBalanceScale, FaGavel, FaSearchDollar } from "react-icons/fa";
+import { FaBullseye, FaShieldAlt, FaChartLine, FaBalanceScale, FaGavel, FaSearchDollar } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa6";
 import logo from "../assets/logo.png";
+import ContactForm from '../components/ContactForm';
+
 
 const evidencePoints = [
-  { 
-    icon: <FaBalanceScale />, 
-    title: "Zero Visibility", 
-    desc: "Your potential clients are searching, but they’re finding your competitors. You’re invisible in the digital courtroom." 
+  {
+    icon: <FaBalanceScale />,
+    title: "Zero Visibility",
+    desc: "Your potential clients are searching, but they’re finding your competitors. You’re invisible in the digital courtroom."
   },
-  { 
-    icon: <FaSearchDollar />, 
-    title: "Bleeding Budget", 
-    desc: "Spending thousands on PPC with no ROI? You’re funding Google, not your firm’s growth." 
+  {
+    icon: <FaSearchDollar />,
+    title: "Bleeding Budget",
+    desc: "Spending thousands on PPC with no ROI? You’re funding Google, not your firm’s growth."
   },
-  { 
-    icon: <FaGavel />, 
-    title: "Weak Leads", 
-    desc: "Your phone rings, but it’s price shoppers and dead ends. You need cases, not conversations." 
+  {
+    icon: <FaGavel />,
+    title: "Weak Leads",
+    desc: "Your phone rings, but it’s price shoppers and dead ends. You need cases, not conversations."
   },
 ];
 
 const whyUsPoints = [
-  { 
-    icon: <FaShieldAlt />, 
-    title: "Build a Strong Brand", 
-    desc: "We ensure your firm shows up with authority when people search for legal help." 
+  {
+    icon: <FaShieldAlt />,
+    title: "Build a Strong Brand",
+    desc: "We ensure your firm shows up with authority when people search for legal help."
   },
-  { 
-    icon: <FaChartLine />, 
-    title: "High-Intent Rankings", 
-    desc: "Rank for keywords that drive retainers, not just casual traffic." 
+  {
+    icon: <FaChartLine />,
+    title: "High-Intent Rankings",
+    desc: "Rank for keywords that drive retainers, not just casual traffic."
   },
-  { 
-    icon: <FaBullseye />, 
-    title: "Targeted Acquisition", 
-    desc: "Run ads that reach the right audience—people who need a lawyer now." 
+  {
+    icon: <FaBullseye />,
+    title: "Targeted Acquisition",
+    desc: "Run ads that reach the right audience—people who need a lawyer now."
   },
-  { 
-    icon: <FaUserCheck />, 
-    title: "Client Generator", 
-    desc: "Turn your website into a machine that books consultations automatically." 
+  {
+    icon: <FaUserCheck />,
+    title: "Client Generator",
+    desc: "Turn your website into a machine that books consultations automatically."
   },
 ];
 
@@ -54,12 +55,12 @@ export default function CampaignLawFirms() {
   // 1. Initialize ref for the video element
   const videoRef = useRef(null);
   // 2. State to track if the video is playing (starts as true because of autoPlay)
-  const [isPlaying, setIsPlaying] = useState(true); 
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const scrollToCTA = () => {
     document.getElementById('hunt-section').scrollIntoView({ behavior: 'smooth' });
   };
-  
+
   // 3. Toggle function to play/pause the video
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -77,7 +78,7 @@ export default function CampaignLawFirms() {
 
       {/* ---------------- HEAD / CLARITY SCRIPT ---------------- */}
       <Helmet>
-        
+
         <script type="text/javascript">
           {`
             (function(c,l,a,r,i,t,y){
@@ -106,9 +107,9 @@ export default function CampaignLawFirms() {
                   Court Battle
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-               How many weeks have passed without a strong client inquiry? How often do you see competitors winning the cases you could handle better? And how many times have you thought, “I just need the right clients to find me.”
+                How many weeks have passed without a strong client inquiry? How often do you see competitors winning the cases you could handle better? And how many times have you thought, “I just need the right clients to find me.”
               </p>
 
               <p className="text-gray-400 italic">
@@ -116,14 +117,14 @@ export default function CampaignLawFirms() {
               </p>
 
               <p className="text-gray-400 italic">
-               "The attorneys getting attention are not always the best, they are the ones being found online."
+                "The attorneys getting attention are not always the best, they are the ones being found online."
               </p>
-                  
+
               {/* ------------ VIDEO SECTION WITH CONTROLS ------------ */}
               <div className="w-full flex justify-center mb-10 relative">
                 <video
                   ref={videoRef} // Attach the ref to the video element
-                  src={video}
+                  src="/lawyer.mp4"
                   className="rounded-xl w-full border border-white/10"
                   autoPlay
                   loop
@@ -133,7 +134,7 @@ export default function CampaignLawFirms() {
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
                 />
-                
+
                 {/* The Play/Pause Button Overlay */}
                 <button
                   onClick={togglePlayPause}
@@ -151,17 +152,17 @@ export default function CampaignLawFirms() {
                 </button>
               </div>
               {/* ------------ END VIDEO SECTION ------------ */}
-              
+
               <div className="mt-8">
                 <h2 className="text-2xl font-bold text-white mb-2">Your Expertise Deserves Clients Who Value it.</h2>
                 <p className="text-gray-300 max-w-3xl mx-auto">
-                That is where GrowthShark steps in. We help lawyers, solo practitioners, and law firms build an online presence that attracts paying clients, not just casual inquiries. Instead of waiting for referrals or walking into networking events hoping someone remembers you, we make sure your ideal clients come to you.
+                  That is where GrowthShark steps in. We help lawyers, solo practitioners, and law firms build an online presence that attracts paying clients, not just casual inquiries. Instead of waiting for referrals or walking into networking events hoping someone remembers you, we make sure your ideal clients come to you.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-              <button 
+              <button
                 onClick={scrollToCTA}
                 className="px-8 py-4 rounded-full bg-lime-400 text-black font-bold text-lg shadow-[0_0_30px_rgba(132,204,22,0.4)] hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1 cursor-pointer"
               >
@@ -191,13 +192,13 @@ export default function CampaignLawFirms() {
                   Imagine This&nbsp;<span className="text-[#3bb2ff]">Instead:</span>
                 </span>
                 <span className="lg:hidden block">
-                  Imagine This<br/>
+                  Imagine This<br />
                   <span className="text-[#3bb2ff]">Instead:</span>
                 </span>
               </h3>
 
-              
-            
+
+
 
               <div className="space-y-4 pt-6 pb-8 text-left inline-block">
                 {[
@@ -217,8 +218,8 @@ export default function CampaignLawFirms() {
                 ))}
               </div>
 
-              <p className="text-xl text-white pt-2"> 
-               That is the power of smart digital marketing designed specifically for lawyers.
+              <p className="text-xl text-white pt-2">
+                That is the power of smart digital marketing designed specifically for lawyers.
               </p>
 
             </div>
@@ -228,7 +229,7 @@ export default function CampaignLawFirms() {
           <section className="mt-24 text-center">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Why Do Lawyers Choose GrowthShark?</h3>
             <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-             We understand the legal world is different. You cannot sound salesy. You cannot make vague claims. You need credibility, authority, clarity, and reputation.
+              We understand the legal world is different. You cannot sound salesy. You cannot make vague claims. You need credibility, authority, clarity, and reputation.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -253,7 +254,7 @@ export default function CampaignLawFirms() {
 
             <div className="relative z-10 text-center">
               <p className="text-xl sm:text-2xl font-bold text-white mb-6 pt-10">
-               If you have been thinking, <span className="italic text-lime-400">“I should be getting more cases than this”</span> , then this is your moment.
+                If you have been thinking, <span className="italic text-lime-400">“I should be getting more cases than this”</span> , then this is your moment.
               </p>
 
               <p className="text-lg text-gray-300 mb-8">
@@ -268,12 +269,13 @@ export default function CampaignLawFirms() {
                 href="https://calendly.com/proriterz101/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-lime-400 shadow-lg shadow-black/50 hover:shadow-[0_0_40px_rgba(132,204,22,0.6)] hover:brightness-110 transition transform hover:-translate-y-1 text-black lg:font-bold px-10 py-4 rounded-full text-lg duration-300 font-semibold"
+                className="inline-flex items-center gap-2  text-lime-300 lg:font-bold px-10 py-4 rounded-full text-lg duration-300 font-semibold"
               >
-                Book your free 15-minute consultation with GrowthShark today
+                Book your free 15-minute consultation with GrowthShark today.
               </a>
+              <ContactForm />
 
-              <p className="text-gray-400 text-sm mt-4">
+              <p className="text-gray-200 text-lg mt-4">
                 and let's help your practice get the visibility and paying clients it truly deserves.
               </p>
             </div>

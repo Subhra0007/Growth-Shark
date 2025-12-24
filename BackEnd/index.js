@@ -6,6 +6,7 @@ import careerRoute from "./api/career.js";
 import contactRoute from "./api/contact.js";
 import partnersubmitRoute from "./api/partnersubmit.js";
 import aboutusRoute from "./api/aboutus.js";
+import mailRoute from "./api/mail.js";
 // Load env variables
 dotenv.config();
 
@@ -39,7 +40,6 @@ app.use(
 );
 
 // Middleware for parsing JSON and URL-encoded data
-app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -48,6 +48,8 @@ app.use("/api/contact", contactRoute);
 app.use("/api/career", careerRoute);
 app.use("/api/partnersubmit", partnersubmitRoute); // Use app.use for consistent routing
 app.use("/api/aboutus", aboutusRoute);
+app.use("/api/mail", mailRoute);
+console.log("Route registered: /api/mail ✅");
 // Default route with health check
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Backend API is running", status: "healthy" });
