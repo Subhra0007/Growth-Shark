@@ -108,6 +108,7 @@ export default function CampaignLawFirms() {
                 </span>
               </h1>
 
+
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 How many weeks have passed without a strong client inquiry? How often do you see competitors winning the cases you could handle better? And how many times have you thought, “I just need the right clients to find me.”
               </p>
