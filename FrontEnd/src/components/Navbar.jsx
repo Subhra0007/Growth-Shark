@@ -9,16 +9,16 @@ export default function Navbar({ toggleMode, isStealth }) {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(null);
   const dropdownRef = useRef(null);
-  
+
   // Custom hook to ensure state updates are properly handled
   const useLoggedState = (initialValue, name) => {
     const [state, setState] = useState(initialValue);
-    
+
     const loggedSetState = useCallback((value) => {
       console.log(`Setting ${name} to:`, value);
       setState(value);
     }, [name]);
-    
+
     return [state, loggedSetState];
   };
 
@@ -81,44 +81,41 @@ export default function Navbar({ toggleMode, isStealth }) {
     ...services.map((s) => s.link),
   ];
 
-const handleToggleMode = () => {
-  console.log("Current Path:", location.pathname);
-  console.log("Current isStealth:", isStealth);
+  const handleToggleMode = () => {
+    console.log("Current Path:", location.pathname);
+    console.log("Current isStealth:", isStealth);
 
-  // Special handling for /lawyer page
-  if (location.pathname === "/lawyer") {
-    // Navigate directly to the appropriate home page variant
-    if (isStealth) {
-      // Currently in stealth mode, toggle to attack mode
+    // Special handling for campaign pages
+    const campaignPaths = ["/lawyer", "/plumber", "/roofer", "/dental"];
+    if (campaignPaths.includes(location.pathname)) {
+      // Navigate directly to the appropriate home page variant
+      // and ensure mode is toggled via toggleMode if required
+      toggleMode();
       navigate("/");
-    } else {
-      // Currently in attack mode, toggle to stealth mode
-      navigate("/");
+      return;
     }
-    return;
-  }
 
-  // Toggle the mode for other pages
-  toggleMode();
+    // Toggle the mode for other pages
+    toggleMode();
 
-  // Scroll to top
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "instant",
-  });
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
 
-  // Normalize pathname (remove trailing slash)
-  const currentPath = location.pathname.toLowerCase().replace(/\/$/, "");
+    // Normalize pathname (remove trailing slash)
+    const currentPath = location.pathname.toLowerCase().replace(/\/$/, "");
 
-  // Add blog paths to redirect list
-  const isBlogPage = currentPath === "/blog" || currentPath.startsWith("/blog/");
+    // Add blog paths to redirect list
+    const isBlogPage = currentPath === "/blog" || currentPath.startsWith("/blog/");
 
-  if (redirectPaths.includes(currentPath) || isBlogPage) {
-    console.log("Redirecting to home: /");
-    navigate("/");
+    if (redirectPaths.includes(currentPath) || isBlogPage) {
+      console.log("Redirecting to home: /");
+      navigate("/");
+    };
   };
-};
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -154,9 +151,8 @@ const handleToggleMode = () => {
           : { width: 0 }
       }
       transition={{ duration: 0.3 }}
-      className={`absolute left-0 -bottom-1 h-0.5 ${
-        location.pathname === link ? "bg-lime-400" : "bg-white"
-      }`}
+      className={`absolute left-0 -bottom-1 h-0.5 ${location.pathname === link ? "bg-lime-400" : "bg-white"
+        }`}
     />
   );
 
@@ -203,23 +199,20 @@ const handleToggleMode = () => {
                   >
                     {item.name}
                     <FaChevronDown
-                      className={`transition-transform duration-200 ${
-                        isServicesOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`transition-transform duration-200 ${isServicesOpen ? "rotate-180" : "rotate-0"
+                        }`}
                       size={14}
                     />
                     <span
-                      className={`absolute left-0 -bottom-1 h-0.5 transition-all duration-300 ${
-                        isServicePage || isSocialMediaServiceActive
-                          ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
-                          : "w-0 group-hover:w-full bg-white"
-                      }`}
+                      className={`absolute left-0 -bottom-1 h-0.5 transition-all duration-300 ${isServicePage || isSocialMediaServiceActive
+                        ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
+                        : "w-0 group-hover:w-full bg-white"
+                        }`}
                     />
                   </button>
                   <div
-                    className={`absolute top-full left-0 mt-3 w-80 max-h-72 overflow-y-auto bg-[#71b5f0] text-black shadow-lg rounded-lg origin-top transition duration-300 ${
-                      isServicesOpen ? "animate-fadeScale" : "hidden"
-                    }`}
+                    className={`absolute top-full left-0 mt-3 w-80 max-h-72 overflow-y-auto bg-[#71b5f0] text-black shadow-lg rounded-lg origin-top transition duration-300 ${isServicesOpen ? "animate-fadeScale" : "hidden"
+                      }`}
                   >
                     {/* Main Services */}
                     {mainServices.map((service) => (
@@ -233,15 +226,14 @@ const handleToggleMode = () => {
                       >
                         {service.name}
                         <span
-                          className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${
-                            location.pathname === service.link
-                              ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
-                              : "w-0 group-hover:w-full bg-white"
-                          }`}
+                          className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${location.pathname === service.link
+                            ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
+                            : "w-0 group-hover:w-full bg-white"
+                            }`}
                         />
                       </Link>
                     ))}
-                    
+
                     {/* Social Media Marketing Services Submenu */}
                     <div className="relative">
                       <button
@@ -254,11 +246,10 @@ const handleToggleMode = () => {
                         onMouseLeave={() => setHovered(null)}
                       >
                         <span>Social Media Marketing Services</span>
-                        <FaChevronDown 
-                          className={`transform transition-transform duration-200 ${
-                            isSocialMediaSubMenuOpen ? 'rotate-180' : 'rotate-0'
-                          }`} 
-                          size={12} 
+                        <FaChevronDown
+                          className={`transform transition-transform duration-200 ${isSocialMediaSubMenuOpen ? 'rotate-180' : 'rotate-0'
+                            }`}
+                          size={12}
                         />
                       </button>
                       <div className={`pl-3 transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -273,11 +264,10 @@ const handleToggleMode = () => {
                           >
                             {service.name}
                             <span
-                              className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${
-                                location.pathname === service.link
-                                  ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
-                                  : "w-0 group-hover:w-full bg-white"
-                              }`}
+                              className={`absolute left-0 bottom-0 h-0.5 transition-all duration-300 ${location.pathname === service.link
+                                ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
+                                : "w-0 group-hover:w-full bg-white"
+                                }`}
                             />
                           </Link>
                         ))}
@@ -292,11 +282,10 @@ const handleToggleMode = () => {
                 >
                   {item.name}
                   <span
-                    className={`absolute left-0 -bottom-1 h-0.5 transition-all duration-300 ${
-                      location.pathname === item.link
-                        ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
-                        : "w-0 group-hover:w-full bg-white"
-                    }`}
+                    className={`absolute left-0 -bottom-1 h-0.5 transition-all duration-300 ${location.pathname === item.link
+                      ? "w-full bg-lime-400 shadow-[0_0_6px_rgba(0,0,0,0.4)]"
+                      : "w-0 group-hover:w-full bg-white"
+                      }`}
                   />
                 </Link>
               )}
@@ -343,9 +332,8 @@ const handleToggleMode = () => {
                   >
                     Services
                     <FaChevronDown
-                      className={`transition-transform duration-200 ease-in-out ${
-                        isMobileServicesOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`transition-transform duration-200 ease-in-out ${isMobileServicesOpen ? "rotate-180" : "rotate-0"
+                        }`}
                       size={14}
                     />
                   </button>
@@ -365,10 +353,10 @@ const handleToggleMode = () => {
                           {service.name}
                         </Link>
                       ))}
-                      
+
                       {/* Social Media Marketing Services Submenu */}
                       <div className="py-2">
-                        <button 
+                        <button
                           className="flex items-center justify-between w-full  py-2 text-base"
                           onClick={(e) => {
                             e.stopPropagation();
@@ -378,11 +366,10 @@ const handleToggleMode = () => {
                           }}
                         >
                           <span>Social Media Marketing Services</span>
-                          <FaChevronDown 
-                            className={`transform transition-transform duration-200 ease-in-out ${
-                              isSocialMediaSubMenuOpen ? 'rotate-180' : 'rotate-0'
-                            }`} 
-                            size={12} 
+                          <FaChevronDown
+                            className={`transform transition-transform duration-200 ease-in-out ${isSocialMediaSubMenuOpen ? 'rotate-180' : 'rotate-0'
+                              }`}
+                            size={12}
                           />
                         </button>
                         <div className={` pl-3 transition-all duration-300 ease-in-out overflow-hidden ${isSocialMediaSubMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>

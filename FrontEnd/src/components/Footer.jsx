@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import FooterLogo from "../assets/FooterLogo.png";
 
 export default function Footer() {
-   const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="relative text-white overflow-hidden bg-gradient-to-r from-black via-[#0b223f] to-[#06263f] ">
       {/* Footer Content */}
@@ -47,42 +47,69 @@ export default function Footer() {
                 Contact Us
               </Link>
             </li>
-             <li>
-<Link to="/blog" className="hover:text-white transition">Blogs</Link>
-</li>
+            <li>
+              <Link to="/blog" className="hover:text-white transition">Blogs</Link>
+            </li>
 
+          </ul>
+        </div>
+
+        {/* Industries We Cater */}
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-xl font-bold mb-3 text-sky-400 text-nowrap">Industries We Cater</h3>
+          <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+            <li>
+              <Link to="/lawyer" className="hover:text-white transition">
+                Lawyers
+              </Link>
+            </li>
+            <li>
+              <Link to="/plumber" className="hover:text-white transition">
+                Plumbers
+              </Link>
+            </li>
+            <li>
+              <Link to="/roofer" className="hover:text-white transition">
+                Roofers
+              </Link>
+            </li>
+            <li>
+              <Link to="/dental" className="hover:text-white transition">
+                Dental
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Contact + Social */}
         <div className="flex flex-col items-center text-center">
           <h3 className="text-xl font-bold mb-3 text-sky-400">Connect Us</h3>
-        <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-  <li>
-    <a
-      href="mailto:marketing@growthshark.io"
-      className="hover:text-white transition"
-    >
-    marketing@growthshark.io
-    </a>
-  </li>
-  <li>
-    <a
-      href="mailto:diptesh@growthshark.io"
-      className="hover:text-white transition"
-    >
-     diptesh@growthshark.io
-    </a>
-  </li>
-  <li>
-    <a
-      href="tel:+918348296083"
-      className="hover:text-white transition"
-    >
-      +91 83482 96083
-    </a>
-  </li>
-</ul>
+          <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+            <li>
+              <a
+                href="mailto:marketing@growthshark.io"
+                className="hover:text-white transition"
+              >
+                marketing@growthshark.io
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:diptesh@growthshark.io"
+                className="hover:text-white transition"
+              >
+                diptesh@growthshark.io
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+918348296083"
+                className="hover:text-white transition"
+              >
+                +91 83482 96083
+              </a>
+            </li>
+          </ul>
           <div className="flex gap-4 mt-4 text-sky-300 text-xl">
             <a
               href="https://www.facebook.com/growthshark"
@@ -107,11 +134,11 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      
-       <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-6 max-w-6xl mx-auto mt-10">
-          © {currentYear} Growth Shark. All Rights Reserved.
-        </div>
-    
+
+      <div className="relative z-10 text-center text-sm text-gray-400 pb-6 px-6 max-w-6xl mx-auto mt-10">
+        © {currentYear} Growth Shark. All Rights Reserved.
+      </div>
+
     </footer>
   );
 }

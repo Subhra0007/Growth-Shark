@@ -15,6 +15,9 @@ import Portfolio from "./pages/Portfolio";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import CampaignLawFirms from "./pages/CampaignLawFirms";
+import CampaignPlumbers from "./pages/CampaignPlumbers";
+import CampaignRoofers from "./pages/CampaignRoofers";
+import CampaignDental from "./pages/CampaignDental";
 
 // Portfolio Case Pages
 import Smm1 from "./pages/portfolio/Smm1";
@@ -81,6 +84,9 @@ function AppContent() {
         <Route path="/career" element={<Career />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/lawyer" element={<CampaignLawFirms />} />
+        <Route path="/plumber" element={<CampaignPlumbers />} />
+        <Route path="/roofer" element={<CampaignRoofers />} />
+        <Route path="/dental" element={<CampaignDental />} />
         {/* Portfolio Cases */}
         <Route path="/portfolio/smm1" element={<Smm1 />} />
         <Route path="/portfolio/smm2" element={<Smm2 />} />

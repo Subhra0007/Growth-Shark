@@ -50,7 +50,7 @@ const ContactForm = () => {
   return (
     <div className="flex justify-center items-center py-10">
       <div className="bg-[#71b5f0] p-8 rounded-2xl w-full max-w-2xl shadow-2xl">
-      <p className="text-black mb-10 font-semibold">Or Fillup The Form Below </p>
+        <p className="text-black mb-10 font-semibold">Or Fillup The Form Below </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
@@ -83,13 +83,13 @@ const ContactForm = () => {
             required
           />
 
-          <div className="flex justify-between items-center">
-            <p className="text-xs italic text-gray-800">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0">
+            <p className="text-xs italic text-gray-800 text-center lg:text-left">
               *We promise not to disclose your personal information.
             </p>
             <button
               type="submit"
-              className="bg-lime-400 hover:bg-lime-500 text-black font-bold py-3 px-6 rounded-xl"
+              className="w-full lg:w-auto bg-lime-400 hover:bg-lime-500 text-black font-bold py-3 px-6 rounded-xl"
             >
               Send Message
             </button>
