@@ -222,11 +222,11 @@ export default function CampaignPlumbers() {
                                           We understand the depths of plumbing contractor marketing and act accordingly. We provide speed, clarity, and local dominance without relying on generic campaigns.
                                     </p>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
                                           {whyUsPoints.map((item, index) => (
                                                 <div
                                                       key={index}
-                                                      className={`bg-white/5 border border-white/10 rounded-xl p-6 text-left hover:bg-white/[0.07] transition duration-300 ${index === 4 ? "lg:col-start-2 lg:col-span-2" : ""}`}
+                                                      className={`bg-white/5 border border-white/10 rounded-xl p-6 text-left hover:bg-white/[0.07] transition duration-300 h-full lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""}`}
                                                 >
                                                       <div className="text-lime-400 text-3xl mb-4">{item.icon}</div>
                                                       <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
